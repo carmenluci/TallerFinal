@@ -102,3 +102,6 @@ dist
 
 # TernJS port file
 .tern-port
+
+# Ignorar la carpeta de imagenes
+.imagenes/
