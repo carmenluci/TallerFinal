@@ -1,0 +1,74 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #20d891e8;
+    font-family: 'calibri';
+    align-items: center;
+    justify-content: center;
+    width:1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h1 {
+    color: black;
+}
+
+ol{
+    column-count: 2;
+}
+
+ol li
+{
+background-color: beige;     
+width: 80px;
+height: 80px;
+border: solid 2px gray;
+margin: 5px;
+font-size: medium;
+}
+
+.cabecera {
+    background-color: #67510e82;
+    border-radius: 5px;
+    box-shadow: 4px 2px 5px gray;
+    padding: 10px 40px;
+    width: 400px;
+    margin: 0 auto;
+}
+
+.seccion {
+    background-color: darkturquoise;
+    border-radius: 10px;
+    box-shadow: 4px 2px 5px gray;
+    width: 400px;
+    margin: 0 auto;
+    max-width: 100%;
+    padding: 20px 60px;
+}
+
+#fruta{
+    margin: auto;
+    height: 60px;
+    padding: 5px;
+}
+
+button{
+    background-color: cornflowerblue;
+    border: 2px solid gray;
+    border-radius: 4px;
+    color: black
+    ;
+    font-size: 16px;
+    padding: 10px;
+}
+
+.pares:nth-child(even) { 
+    background-color: #45ff24; 
+}
+
+.impares:nth-child(odd) { 
+    background-color: #45ff24; 
+}
