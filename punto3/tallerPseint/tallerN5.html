@@ -1,0 +1,1122 @@
+<!DOCTYPE html>
+<html lang="ens">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taller N°5 | PSeInt</title>
+	<link rel="stylesheet" href="/punto3/css/style.css">
+	<script src="/punto3/js/archivo.js"></script>
+</head>
+<body onload = "main()">
+    <header class="header" >
+        <h1>Taller N°5 PSeInt: Funciones</h1> 
+    </header>
+	<nav>
+		<button class="botones">
+		    <a href="/punto3/tallerPseint/indexPseint.html">Ir a Talleres PSeInt</a>
+	    </button>
+	</nav>
+    <section>
+        <div class="accordion-item">
+            <input type="checkbox" name="acordeon" id="item1">
+            <label for="item1" class="acordeon-titulo">Punto N°1</label>
+            <p class="acordeon-contenido">               
+                1. Organizar todos los puntos del taller de condicionales en modo funciones.
+            </p>
+            <pre class="acordeon-contenido">
+                <button class="botonCopiar" onclick="Ejecutar(this)" id="0">Copiar codigo</button>
+                <code class="code">
+SubProceso  mayorEdad (edad)
+	Si edad>=18 Entonces
+		Escribir "Usted es mayor de esdad";
+	FinSi
+FinSubProceso
+
+Proceso MayorDeEdad
+	Definir edad Como Entero;
+	Escribir "Ingrese su edad:";
+	Leer edad;
+	mayorEdad(edad);
+FinProceso
+				</code>
+			</pre>
+		</div>
+		<div class="accordion-item">
+            <input type="checkbox" name="acordeon" id="item2">
+            <label for="item2" class="acordeon-titulo">Punto N°2</label>
+				<pre class="acordeon-contenido">
+					<button class="botonCopiar" onclick="Ejecutar(this)" id="1">Copiar codigo</button>
+					<code class="code">
+SubProceso menorEdad (edad)
+		Si edad < 18 Entonces
+			Escribir "Usted aún es un(a) niño(a)";
+		FinSi
+FinSubProceso
+
+Proceso edadMenor
+	Definir edad Como Entero;
+	Escribir "Escriba su edad:";
+	Leer edad;
+	menorEdad(edad);	
+FinProceso
+					</code>
+				</pre>
+		</div>
+		<div class="accordion-item">
+            <input type="checkbox" name="acordeon" id="item3">
+            <label for="item3" class="acordeon-titulo">Punto N°3</label>
+				<pre class="acordeon-contenido">
+					<button class="botonCopiar" onclick="Ejecutar(this)" id="2">Copiar codigo</button>
+					<code class="code">		
+SubProceso MayorOmenor ( nombreCompleto, edad )
+	Si edad >= 18 Entonces
+		Escribir nombreCompleto, " ", "usted es mayor de edad, por lo tanto puede entrar a la fiesta"; 
+	SiNo
+		Escribir nombreCompleto, " ", "usted es menor de edad, por lo tanto no puede entrar a la fiesta, por favor devuelvase a su casa";
+	FinSi
+FinSubProceso
+
+Proceso mayorOigual
+	Definir nombreCompleto Como Caracter;
+	Definir edad Como Entero;
+	
+	Escribir "Escriba su nombre y apellidos:";
+	Leer nombreCompleto;
+	Escribir "¿Cuál es su edad?";
+	Leer edad;
+	
+	MayorOmenor(nombreCompleto, edad );
+FinProceso
+					</code>
+				</pre>
+		</div>
+		<div class="accordion-item">
+            <input type="checkbox" name="acordeon" id="item4">
+            <label for="item4" class="acordeon-titulo">Punto N°4</label>
+				<pre class="acordeon-contenido">
+					<button class="botonCopiar" onclick="Ejecutar(this)" id="3">Copiar codigo</button>
+					<code class="code">		
+Proceso TiendaDeVideo
+	Definir nombreUsuario Como Caracter;
+	Definir opcion Como Entero;
+	Definir tiposDePeliculas Como Caracter;
+	Definir alquilarPelicula Como Caracter;
+	Definir devolverPelicula Como Caracter;
+	
+	VideoTienda(nombreUsuario, opcion, tiposDePeliculas, alquilarPelicula, devolverPelicula);
+	
+FinProceso
+SubProceso VideoTienda ( nombreUsuario, opcion, tiposDePeliculas, alquilarPelicula, devolverPelicula )
+	Escribir "Nombre de usuario:";
+	Leer nombreUsuario;
+	Escribir "Elija una opción";
+	Escribir "1. Consultar películas disponibles";
+	Escribir "2. Alquilar película";
+	Escribir "3. Recibir película en la video tienda";
+	Escribir "4. Devolver película";
+	Leer opcion;
+	Segun opcion Hacer
+		1: 
+			Escribir "- Terror";
+			Escribir "- Acción";
+			Escribir "- Romance";
+			Leer tiposDePeliculas;
+		2:
+			Escribir "Sí";
+			Escribir "No";
+			Leer alquilarPelicula;
+		3:
+			Escribir "Su película está disponible, puede recibirla en nuestra tienda";
+		4: 
+			Escribir "- Devuelvo esta película porque ya la vi, no recordaba";
+			Escribir "- Está en mal estado";
+			Escribir "- No me gusta la resolución de la película";
+			Leer devolverPelicula;
+		De Otro Modo:
+			Escribir "Gracias por visitar nuestra tienda, que tenga buen día";
+	FinSegun
+FinSubProceso
+					</code>
+				</pre>
+		</div>
+		<div class="accordion-item">
+            <input type="checkbox" name="acordeon" id="item5">
+            <label for="item5" class="acordeon-titulo">Punto N°5</label>
+				<pre class="acordeon-contenido">
+					<button class="botonCopiar" onclick="Ejecutar(this)" id="4">Copiar codigo</button>
+					<code class="code">			
+SubProceso drogueria( )
+	Definir productos Como entero;
+	Definir caracteristicas Como Caracter;
+	Definir devolucionProducto Como Logico;
+	Definir razonDevolucion Como Caracter;
+	devolucionProducto <- Falso;
+	
+	Escribir "¿Qué peoducto desea comprar?";
+	Escribir "1. Medicamentos de salud";
+	Escribir "2. Productos de aseo personal";
+	Escribir "3. Productos para el cuidado de la piel";
+	Leer productos;
+	Segun productos Hacer
+		1:
+			Escribir "Tenemos una amplia lista de medicamentos para cuidar su salud y la de su familia";
+			Escribir "Diga el nombre de su medicamento:";
+			Leer caracteristicas;
+		2:
+			Escribir "Tenemos una amplia lista de productos en la línea de aseoa personal para usted y su familia";
+			Escribir "Diga el nombre de su producto de aseo personal:";
+			Leer caracteristicas;
+		3:
+			escribir "Tenemos una amplia lista de productos para el cuidado de la piel para usted y su familia";
+			Escribir "Diga el nombre de su producto para el cuidado de la piel:";
+			Leer caracteristicas;
+		De Otro Modo:
+			Escribir "¿Desea realizar la devolución de algún producto?";
+			Leer devolucionProducto;
+	FinSegun
+	
+	si devolucionProducto = Verdadero Entonces
+		Escribir "Nos gustaría conocer el motivo por el cual quiere hacer la devolución:";
+		Leer  razonDevolucion;
+	FinSi
+FinSubProceso
+
+Proceso DrogueriaMiSalud
+	Definir productos Como entero;
+	Definir caracteristicas Como Caracter;
+	Definir devolucionProducto Como Logico;
+	Definir razonDevolucion Como Caracter;
+	devolucionProducto <- Falso;
+	
+	drogueria();
+	
+FinProceso
+					</code>
+				</pre>
+		</div>
+		<div class="accordion-item">
+            <input type="checkbox" name="acordeon" id="item6">
+            <label for="item6" class="acordeon-titulo">Punto N°6</label>
+				<pre class="acordeon-contenido">
+					<button class="botonCopiar" onclick="Ejecutar(this)" id="5">Copiar codigo</button>
+					<code class="code">			
+SubProceso ServiciosOpciones()
+	Definir observacionesMoto Como Caracter;
+	Definir cliente Como Caracter;
+	Definir arreglos Como Caracter;
+	Definir serviciosDelTaller Como Entero;
+	Definir repuestos Como Caracter;
+	Definir estadoMoto Como Logico;
+	
+	Escribir "¿Qué servicio requiere el día de hoy en nuestro taller?";
+	Escribir "1. Dejar mi moto para arreglo";
+	Escribir "2. Retirar mi moto que está en el taller";
+	Leer serviciosDelTaller;
+	
+	Segun serviciosDelTaller Hacer
+		1:
+			Escribir "Nombre completo del propietario:";
+			Leer cliente;
+			Escribir "Diga que problemas o fallas presenta la moto:";
+			Leer observacionesMoto;
+		2:
+			Escribir "Su moto se encuentra lista para ser retirada del taller";
+			Escribir "Se realizó el siguiente arreglo:";
+			Leer arreglos;
+			Escribir "Se utilizaron los siguientes repuestos:";
+			Leer repuestos;
+			Escribir "¿Desea conocer el estado de su motocicleta antes de realizar el retiro del taller?";
+			Leer estadoMoto;
+			si estadoMoto = verdadero Entonces
+				Escribir "Su moto está en optimas condiciones y lista para retirar del taller";
+			FinSi
+			
+	FinSegun
+FinSubProceso
+
+Proceso TallerMoto
+	Definir observacionesMoto Como Caracter;
+	Definir cliente Como Caracter;
+	Definir arreglos Como Caracter;
+	Definir serviciosDelTaller Como Entero;
+	Definir repuestos Como Caracter;
+	Definir estadoMoto Como Logico;
+	ServiciosOpciones();
+	
+FinProceso
+					</code>
+				</pre>
+		</div>
+		<div class="accordion-item">
+            <input type="checkbox" name="acordeon" id="item7">
+            <label for="item7" class="acordeon-titulo">Punto N°7</label>
+				<pre class="acordeon-contenido">
+					<button class="botonCopiar" onclick="Ejecutar(this)" id="6">Copiar codigo</button>
+					<code class="code">				
+SubProceso CalculadoraPeso ( IMC, peso, estatura, nombrePaciente )
+	si imc < 18.5 Entonces
+		Escribir "Usted tiene bajo peso";
+	SiNo
+		si imc >= 18.5 y imc <= 24.9 Entonces
+			Escribir "Su peso es normal";
+		SiNo
+			si imc >= 25.0 y imc <= 30 Entonces
+				Escribir "Usted tiene sobre peso";
+			SiNo
+				Escribir "Usted es obeso";
+			FinSi
+		FinSi
+	FinSi
+FinSubProceso
+
+Proceso CalculadoraDePeso
+	Definir imc Como Real;
+	Definir peso Como Real;
+	Definir estatura Como Real;
+	Definir nombrePaciente Como Caracter;
+	
+	Escribir "Por favor escriba su nombre completo:";
+	Leer nombrePaciente;
+	Escribir "Por favor escriba su peso actual:";
+	Leer peso;
+	Escribir "Por favor escriba su estatura:";
+	Leer estatura;
+	
+	imc <- peso/(estatura*estatura);
+	
+	Escribir "A continuación se muestran los resultados de su I.M.C";
+	
+	CalculadoraPeso(IMC, peso, estatura, nombrePaciente);
+	
+FinProceso
+					</code>
+				</pre>
+		</div>
+		<div class="accordion-item">
+            <input type="checkbox" name="acordeon" id="item8">
+            <label for="item8" class="acordeon-titulo">Punto N°8</label>
+				<pre class="acordeon-contenido">
+					<button class="botonCopiar" onclick="Ejecutar(this)" id="7">Copiar codigo</button>
+					<code class="code">				
+SubProceso PasteleriaDonC()
+	Definir nombreCliente Como Caracter;
+	Definir opciones Como Entero;
+	Definir cantidad Como Entero;
+	Definir precio Como Entero;
+	Definir opcionCompra Como Logico;
+	Definir precioTorta1L Como Real;
+	Definir precioTortaMediaL Como Real;
+	
+	precioTorta1L <- 25.000;
+	precioTortaMediaL <- 18.000;
+	Escribir "Escriba su nombre y apellidos:";
+	Leer nombreCliente;
+	Escribir "Elija una opción de nuestro menú de tortas:";
+	Escribir "1. Torta de chocolate de 1 libra";
+	Escribir "2. Torta de chocolate de 1/2 libra";
+	Escribir "3. Torta de zanahoria de 1 libra";
+	Escribir "4. Torta de zanahoria de 1/2 libra";
+	Leer opciones;
+	
+	Segun opciones Hacer
+		1:
+			Escribir "¿Desea comprar torta de chocolate de 1 libra?";
+			Leer opcionCompra;
+			si opcionCompra = Verdadero Entonces
+				Escribir "¿Cuántas tortas desea llevar?";
+				Leer cantidad;
+			FinSi
+			Escribir "El valor de su compra es:";
+			Leer precioTorta1L;
+			Escribir "Gracias por su compra";
+		2:
+			Escribir "¿Desea comprar torta de chocolate de 1/2 libra?";
+			Leer opcionCompra;
+			si opcionCompra = Verdadero Entonces
+				Escribir "¿Cuántas tortas desea llevar?";
+				Leer cantidad;
+			FinSi
+			Escribir "El valor de su compra es:";
+			Leer precioTortaMediaL;
+			Escribir "Gracias por su compra";
+		3:
+			Escribir "¿Desea comprar torta de zanahoria de 1 libra?";
+			Leer opcionCompra;
+			si opcionCompra = Verdadero Entonces
+				Escribir "¿Cuántas tortas desea llevar?";
+				Leer cantidad;
+			FinSi
+			Escribir "El valor de su compra es:";
+			Leer precioTorta1L;
+			Escribir "Gracias por su compra";
+		4:
+			Escribir "¿Desea comprar torta de zanahoria de 1/2 libra?";
+			Leer opcionCompra;
+			si opcionCompra = Verdadero Entonces
+				Escribir "¿Cuántas tortas desea llevar?";
+				Leer cantidad;
+			FinSi
+			Escribir "El valor de su compra es:";
+			Leer precioTortaMediaL;
+			Escribir "Gracias por su compra";
+	FinSegun
+FinSubProceso
+
+Proceso pasteleria
+	Definir nombreCliente Como Caracter;
+	Definir opciones Como Entero;
+	Definir cantidad Como Entero;
+	Definir precio Como Entero;
+	Definir opcionCompra Como Logico;
+	Definir precioTorta1L Como Real;
+	Definir precioTortaMediaL Como Real;
+	
+	precioTorta1L <- 25.000;
+	precioTortaMediaL <- 18.000;
+	
+	PasteleriaDonC();
+	
+FinProceso
+					</code>
+				</pre>
+		</div>
+		<div class="accordion-item">
+            <input type="checkbox" name="acordeon" id="item9">
+            <label for="item9" class="acordeon-titulo">Punto N°9</label>
+				<pre class="acordeon-contenido">
+					<button class="botonCopiar" onclick="Ejecutar(this)" id="8">Copiar codigo</button>
+					<code class="code">				
+SubProceso areaRectangulo( )
+	Definir ancho, largo, totalRectangulo Como Real;
+	Definir figurasGeometricas Como Entero;
+	Escribir "Taller, debe calcular el aáea de las siguientes figuras geométricas:";
+	Escribir "1. Área de rectángulo";
+	Escribir "2. Área de triángulo";
+	Escribir "3. Área de trapecio";
+	Leer figurasGeometricas;
+	Escribir "Calcular el área del rectángulo";
+	Escribir "¿Cuánto mide el largo de tu rectángulo?";
+	Leer largo;
+	Escribir "¿Cuánto ide el ancho de tu retángulo?";
+	Leer ancho;
+	totalRectangulo <- largo*ancho;
+	Escribir "El área del rectángulo es: ", totalRectangulo;
+	Esperar 2 Segundos;
+	Limpiar Pantalla;
+FinSubProceso
+
+SubProceso areaTriangulo ( )
+	Definir baseTriangulo, altura, totalTriangulo Como Real;
+	Definir figurasGeometricas Como Entero;
+	Escribir "Taller, debe calcular el aáea de las siguientes figuras geométricas:";
+	Escribir "1. Área de rectángulo";
+	Escribir "2. Área de triángulo";
+	Escribir "3. Área de trapecio";
+	Leer figurasGeometricas;
+	
+	Escribir "Calcular el área del triángulo";
+	Escribir "¿Cuál es el valor de la base de tu triángulo?";
+	Leer baseTriangulo;
+	Escribir "¿Cuánto mide la altura de tu triángulo?";
+	Leer altura;
+	totalTriangulo <- (baseTriangulo*altura)/2;
+	Escribir "El área del triángulo es: ", totalTriangulo;
+	Esperar 2 Segundos;
+	Limpiar Pantalla;
+FinSubProceso
+
+SubProceso areaTrapecio( )
+	Definir baseTrapecio1, baseTrapecio2, altura, totalTrapecio Como Real;
+	Definir figurasGeometricas Como Entero;
+	Escribir "Taller, debe calcular el aáea de las siguientes figuras geométricas:";
+	Escribir "1. Área de rectángulo";
+	Escribir "2. Área de triángulo";
+	Escribir "3. Área de trapecio";
+	Leer figurasGeometricas;
+	Escribir "Calcular el área del trapecio";
+	Escribir "¿Cuál es el valor de la base1 de tu trapecio?";
+	Leer baseTrapecio1;
+	Escribir "¿Cuál es el valor de la base2 de tu trapecio?";
+	Leer baseTrapecio2;
+	Escribir "¿Cuánto mide la altura de tu trapecio?";
+	Leer altura;
+	totalTrapecio <- (baseTrapecio1+baseTrapecio2)*altura/2;
+	Escribir "El área del trapecio es: ", totalTrapecio;
+	Esperar 2 Segundos;
+	Limpiar Pantalla;
+FinSubProceso
+
+Proceso areaFiguras
+	Definir altura Como Real;
+	Definir ancho Como Real;
+	Definir largo Como Real;
+	Definir totalRectangulo, totalTriangulo,  totalTrapecio Como Real;
+	Definir baseTriangulo, baseTrapecio1, baseTrapecio2 Como Real;
+	Definir figurasGeometricas Como Entero;
+	Definir nombreEstudiante Como Caracter;
+	Escribir "Nombre del estudiante:";
+	Leer nombreEstudiante;
+	
+	areaRectangulo();
+	areaTriangulo( );
+	areaTrapecio( );
+FinProceso
+					</code>
+				</pre>
+		</div>
+		<div class="accordion-item">
+            <input type="checkbox" name="acordeon" id="item10">
+            <label for="item10" class="acordeon-titulo">Punto N°10</label>
+				<pre class="acordeon-contenido">
+					<button class="botonCopiar" onclick="Ejecutar(this)" id="9">Copiar codigo</button>
+					<code class="code">		
+SubProceso saldo <- saldoTotal(saldoInicial, depositar)
+	Definir saldo Como Entero;
+	saldo<-0;
+	saldo<-(saldo+depositar);
+FinSubProceso
+
+SubProceso AppBanco ( )
+	Definir consultarSaldo, depositar, saldo, serviciosBanco Como Entero;
+	saldo <- 0;
+	Escribir "Estos son nuestros servicios, seleccione la opción que desea realizar";
+	Escribir "1. Realizar deposito";
+	Escribir "2. Realizar retiro";
+	Escribir "3. Realizar consulta de saldo";
+	Leer serviciosBanco;
+	Escribir "¿Cuánto es el monto de su depósito o consignación? (el depósito mínimo es de 5 pesos)";
+	Leer depositar;
+	saldo <- saldoTotal(saldo, depositar);
+	Escribir saldo<-(saldo+depositar);
+	si depositar >= 5 Entonces
+		Escribir "Su depósito se ha realizado con éxito";
+	SiNo
+		Escribir "Operación inválida, el monto mínimo debe ser de 5 pesos";
+	FinSi
+	
+	Esperar 1 segundo;
+FinSubProceso	
+	
+SubProceso  Retiro()
+	Definir retirar, saldo, depositar, serviciosBanco Como Entero;
+	saldo<-0;
+	depositar<-15;
+	saldo <- saldoTotal(saldo, depositar);
+	saldo<-(saldo+depositar);
+	Escribir "Estos son nuestros servicios, seleccione la opción que desea realizar";
+	Escribir "1. Realizar deposito";
+	Escribir "2. Realizar retiro";
+	Escribir "3. Realizar consulta de saldo";
+	Leer serviciosBanco;
+	Escribir "¿Cuánto desea retirar?";
+	Leer retirar;
+	
+	si retirar <= saldo Entonces
+		Escribir "Su retiro se ha realizado con éxito";
+	SiNo
+		Escribir "Saldo insuficiente";
+		Escribir "Su saldo es: ", saldo;
+		
+		Escribir "Esta opción es invalida, por favor verifique nuestras opciones, que tenga un buen día";
+	FinSi
+FinSubProceso
+
+
+Proceso Banco
+	Definir cliente Como Caracter;
+	Definir numeroCuenta Como Entero;
+	Escribir "Su Banco Fiel";
+	Escribir "Nombre Cliente:";
+	Leer cliente;
+	Escribir "Número de Cuenta:";
+	Leer numeroCuenta;
+	
+	AppBanco( );
+	Retiro();
+FinProceso
+					</code>
+				</pre>
+		</div>
+		<div class="accordion-item">
+            <input type="checkbox" name="acordeon" id="item11">
+            <label for="item11" class="acordeon-titulo">Punto N°11</label>
+				<pre class="acordeon-contenido">
+					<button class="botonCopiar" onclick="Ejecutar(this)" id="10">Copiar codigo</button>
+					<code class="code">				
+SubProceso AppAgendaTel( )
+	Definir nombre, telefono, organizacion Como Caracter;
+	Dimension nombre[3];
+	Dimension telefono[3];
+	Dimension organizacion[3];
+	Definir opcion, opcionContacto, eliminar Como Entero;
+	Definir contacto1, contacto2, contacto3 Como Caracter;
+	Repetir
+		Escribir "====================================================";
+		Escribir "Indique qué desea realizar";
+		Escribir "1. Registrar Contacto ";
+		Escribir "2. Consultar Contactos ";
+		Escribir "3. Eliminar Contactos ";
+		Leer opcion;
+		Escribir "====================================================";
+		Segun opcion Hacer
+			1:
+				Escribir "Nombre y Apellidos:";
+				leer nombre[0];
+				Escribir "Número de teléfono:";
+				leer telefono[0];
+				Escribir "Organizacion o empresa:";
+				leer organizacion[0];
+				Escribir "Tu contacto se ha guardado: ","Nombre: ", nombre[0] , ". ", "Teléfono: ", " ", telefono[0] , ". Organización: ", " ", organizacion[0];
+				Escribir "====================================================";
+				Escribir "Nombre y Apellidos:";
+				leer nombre[1];
+				Escribir "Número de teléfono:";
+				leer telefono[1];
+				Escribir "Organizacion o empresa:";
+				leer organizacion[1];
+				Escribir "Tu contacto se ha guardado: ","Nombre: ", nombre[1], ". ", " teléfono ", " ", telefono[1], " organización ", " ", organizacion[1];
+				Escribir "====================================================";
+				Escribir "Nombre y Apellidos:";
+				leer nombre[2];
+				Escribir "Número de teléfono:";
+				leer telefono[2];
+				Escribir "Organizacion o empresa:";
+				leer organizacion[2];
+				Escribir "Tu contacto se ha guardado: ", "Nombre: ",  nombre[2], " ", " teléfono ", " ", telefono[2], " organización ", " ", organizacion[2];
+			2:
+				Escribir " consultar: ";
+				Escribir " Contacto 1: (Opc. 1)";
+				Escribir " Contacto 2: (Opc. 2)";
+				Escribir " Contacto 3: (Opc. 3)";
+				Leer opcionContacto;
+				Segun opcionContacto Hacer
+					
+					1:Escribir "Informacion de contacto: ", "Nombre: ", nombre[0], ". Teléfono: ",telefono[0], ". Organización: ", organizacion[0];
+					2:Escribir "Informacion de contacto: ", "Nombre: ", nombre[1], ". Teléfono: ", telefono[1], ". Organización: ", organizacion[1];
+					3:Escribir "Informacion de contacto: ", "Nombre: ", nombre[2], ". Teléfono: ", telefono[2], ". Organización: ", organizacion[2];
+					De Otro Modo:
+						Escribir "Opción no permitida, elija otra opción "; 
+						Leer  opcionContacto;
+				FinSegun
+			3:
+				Escribir "Qué contacto desea eliminar:";
+				Escribir " Contacto 1: (Opc. 1) ";
+				Escribir " Contacto 2: (Opc. 2)";
+				Escribir " Contacto 3: (Opc. 3)";
+				Leer eliminar;
+				contacto1<-ConvertirATexto(0);
+				contacto2<-ConvertirATexto(0);
+				contacto3<-ConvertirATexto(0);
+				Segun eliminar Hacer
+					1:Escribir "Este contacto será eliminado: ", " ", contacto1;
+					2:Escribir "Este contacto será eliminado: ", " ", contacto2;
+					3:Escribir "Este contacto será eliminado: ", " ", contacto3;
+						
+					De Otro Modo:
+						Escribir "Opción no valida"; Leer  opcionContacto;
+				FinSegun
+				
+			De Otro Modo:
+				Escribir "Opción incorrecta " , " ", "Presiona cualquier tecla para salir ";
+				Limpiar Pantalla;
+		FinSegun
+	Hasta Que opcion >=4;
+
+FinSubProceso
+
+Proceso contactosTelefono
+	Definir nombre, telefono, organizacion Como Caracter;
+	Dimension nombre[3];
+	Dimension telefono[3];
+	Dimension organizacion[3];
+	Definir opcion, opcionContacto, eliminar Como Entero;
+	Definir contacto1, contacto2, contacto3 Como Caracter;
+	
+	AppAgendaTel( );
+	
+FinProceso
+					</code>
+				</pre>
+		</div>
+		<div class="accordion-item">
+            <input type="checkbox" name="acordeon" id="item12">
+            <label for="item12" class="acordeon-titulo">Punto N°12</label>
+				<pre class="acordeon-contenido">
+					<button class="botonCopiar" onclick="Ejecutar(this)" id="11">Copiar codigo</button>
+					<code class="code">				
+SubProceso AppParqueadero( )
+	Definir nombreC1, nombreC2, nombreC3, nombreC4, nombreC5 Como Caracter;
+	Definir telefonoC1, telefonoC2, telefonoC3, telefonoC4, telefonoC5 Como caracter;
+	Definir placaC1, placaC2, placaC3, placaC4, placaC5 Como Caracter;
+	Definir marcaC1, marcaC2, marcaC3, marcaC4, marcaC5 Como Caracter;
+	Definir opcParqueadero Como Entero;
+	Definir vehiculoPresente Como Logico;
+	
+	Repetir
+		Escribir "Bienvenidos a su parquedero de confianza EL GUARDIAN";
+		Escribir "=====================================================";
+	    Escribir "Elija una opción:";
+	    Escribir "1. Ingresar vehículo";
+	    Escribir "2. Retirar vehículo";
+	    Escribir "3. Verificar que mi vehículo esté en el parqueadero";
+	    Leer opcParqueadero;
+		
+		Segun opcParqueadero Hacer
+			1:
+				Escribir "Nombre del propietario:";
+				Leer nombreC1;
+				Escribir "Número de contacto:";
+				Leer telefonoC1;
+				Escribir "Marca del vehículo:";
+				Leer marcaC1;
+				Escribir "Placa del vehículo";
+				Leer placaC1;
+				Escribir "Gracias por confiar su vehículo a nuestro cuidado";
+				Escribir "==================================================";
+				
+				Escribir "Nombre del propietario:";
+				Leer nombreC2;
+				Escribir "Número de contacto:";
+				Leer telefonoC2;
+				Escribir "Marca del vehículo:";
+				Leer marcaC2;
+				Escribir "Placa del vehículo";
+				Leer placaC2;
+				Escribir "Gracias por confiar su vehículo a nuestro cuidado";
+				Escribir "==================================================";
+				
+				Escribir "Nombre del propietario:";
+				Leer nombreC3;
+				Escribir "Número de contacto:";
+				Leer telefonoC3;
+				Escribir "Marca del vehículo:";
+				Leer marcaC3;
+				Escribir "Placa del vehículo";
+				Leer placaC3;
+				Escribir "Gracias por confiar su vehículo a nuestro cuidado";
+				Escribir "==================================================";
+				
+				Escribir "Nombre del propietario:";
+				Leer nombreC4;
+				Escribir "Número de contacto:";
+				Leer telefonoC4;
+				Escribir "Marca del vehículo:";
+				Leer marcaC4;
+				Escribir "Placa del vehículo";
+				Leer placaC4;
+				Escribir "Gracias por confiar su vehículo a nuestro cuidado";
+				Escribir "==================================================";
+				
+				Escribir "Nombre del propietario:";
+				Leer nombreC5;
+				Escribir "Número de contacto:";
+				Leer telefonoC5;
+				Escribir "Marca del vehículo:";
+				Leer marcaC5;
+				Escribir "Placa del vehículo";
+				Leer placaC5;
+				Escribir "Gracias por confiar su vehículo a nuestro cuidado";
+				Escribir "==================================================";
+			2:
+				Escribir "A continuación usted procederá a retirar su vehículo de nuestro parqueadero";
+				Escribir "Digite sus datos";
+				Escribir "Nombre propietario";
+				Leer nombreC1;
+				Escribir "Placa del vehículo";
+				Leer placaC1;
+				Escribir "Su vehículo tiene orden de retiro, gracias por utilizar nuestro servicio";
+				Escribir "=====================================================";
+			3:
+				vehiculoPresente <- Falso;
+				si vehiculoPresente = Verdadero Entonces
+					Escribir "Su vehículo se encuentra en nuestro parqueadero";
+				SiNo
+					Escribir "Ya su vehículo fue retirado, esperamos que pronto vuelva a utilizar nuestro servicio";
+				FinSi
+		FinSegun
+	Hasta Que opcParqueadero >= 3;
+	
+	
+FinSubProceso
+
+Proceso parqueadero
+	Definir nombreC1, nombreC2, nombreC3, nombreC4, nombreC5 Como Caracter;
+	Definir telefonoC1, telefonoC2, telefonoC3, telefonoC4, telefonoC5 Como caracter;
+	Definir placaC1, placaC2, placaC3, placaC4, placaC5 Como Caracter;
+	Definir marcaC1, marcaC2, marcaC3, marcaC4, marcaC5 Como Caracter;
+	Definir opcParqueadero Como Entero;
+	Definir vehiculoPresente Como Logico;
+	
+	vehiculoPresente <- Falso;
+	
+	AppParqueadero( );
+FinProceso
+					</code>
+				</pre>
+		</div>
+		<div class="accordion-item">
+            <input type="checkbox" name="acordeon" id="item13">
+            <label for="item13" class="acordeon-titulo">Punto N°13</label>
+				<pre class="acordeon-contenido">
+					<button class="botonCopiar" onclick="Ejecutar(this)" id="12">Copiar codigo</button>
+					<code class="code">				
+SubProceso AppEscuelaAuto( )
+	Definir nAlum Como Caracter;
+	Definir docAlum Como Caracter;
+	Definir edadAlum  Como Entero;
+	Definir alumno Como Entero;
+	Definir opcEscuela Como Entero;
+	Definir alumRegistrado Como Logico;
+	
+	alumRegistrado <- Verdadero;
+	
+	Repetir
+		Escribir "Bienvenido a nuestra escuela elija la opción que desea realizar:";
+		Escribir "1. Registrarse en nuestros cursos";
+		Escribir "2. Consultar aprobación del curso";
+		Escribir "3. salir de la aplicación";
+		Leer opcEscuela;
+		
+		Segun opcEscuela Hacer
+			1:	
+				Repetir
+					Escribir "Escuela de automovilismo EL MAESTRO";
+					Escribir "********************************************************************";
+					Escribir " ";
+					Escribir "Registrese si desea hacer parte de nuestros cursos de automovilismo";
+					Escribir "Nombre completo:";
+					Leer nAlum;
+					Escribir "Documento de identidad:";
+					Leer docAlum;
+					Escribir "Edad:";
+					Leer edadAlum;
+					Escribir "====================================================================";
+					Escribir "Número de alumno registrado:";
+					Leer alumno;
+				Hasta Que alumno == 8;
+			2:
+				Escribir "Nombre alumno:";
+				Leer nAlum;
+				Escribir "Documento de identidad";
+				Leer docAlum;
+				si alumRegistrado = Verdadero Entonces
+					Escribir "Usted aprobó el curso";
+				SiNo
+					Escribir "Usted no aprobó el curso";
+				FinSi
+				Escribir " ";
+				Escribir "=========================================================";
+			3:
+				Escribir "Gracias, que tenga un buen día";
+				
+		FinSegun
+		
+    Hasta Que opcEscuela >=3;
+FinSubProceso
+
+Proceso EscuelaAuto
+	Definir nAlum Como Caracter;
+	Definir docAlum Como Caracter;
+	Definir edadAlum  Como Entero;
+	Definir alumno Como Entero;
+	Definir opcEscuela Como Entero;
+	Definir alumRegistrado Como Logico;
+	
+	alumRegistrado <- Verdadero;
+	
+	AppEscuelaAuto( );
+FinProceso
+					</code>
+				</pre>
+		</div>
+		<div class="accordion-item">
+            <input type="checkbox" name="acordeon" id="item14">
+            <label for="item14" class="acordeon-titulo">Punto N°14</label>
+				<pre class="acordeon-contenido">
+					<button class="botonCopiar" onclick="Ejecutar(this)" id="13">Copiar codigo</button>
+					<code class="code">				
+SubProceso ImpVector( )
+	Definir vector Como Entero;
+	Definir i Como Entero;
+	Dimension vector[5];
+	
+	vector[0] <- 55;
+	vector[1] <- 99;
+	vector[2] <- 11;
+	vector[3] <- 56;
+	vector[4] <- 69;
+	
+	Para i<-0 Hasta 4 Con Paso 1 Hacer
+		Escribir "[", [i], "]", " = ", vector[i];
+	FinPara
+FinSubProceso
+
+Proceso Punto1
+	Definir vector Como Entero;
+	Definir i Como Entero;
+	Dimension vector[5];
+	
+	ImpVector( );
+	
+FinProceso
+					</code>
+				</pre>
+		</div>
+		<div class="accordion-item">
+            <input type="checkbox" name="acordeon" id="item15">
+            <label for="item15" class="acordeon-titulo">Punto N°15</label>
+				<pre class="acordeon-contenido">
+					<button class="botonCopiar" onclick="Ejecutar(this)" id="14">Copiar codigo</button>
+					<code class="code">				
+SubProceso ParesImpares( )
+	Definir arreglo,par,impar,i,indice1,indice2, j Como Entero;
+	indice1<-1;
+	indice2<-1;
+	Dimension arreglo[20];
+	Dimension par[20];
+	Dimension impar[20];
+	
+	para i <- 0 hasta 19 con paso 1 Hacer
+		arreglo[i] <- Aleatorio(1,100);
+	FinPara
+	
+	para i <- 0 hasta 19 con paso 1 Hacer
+		Si (arreglo[i]%2=0) Entonces
+			par[indice1]<-arreglo[i];
+			indice1<-indice1+1;
+		SiNo
+			impar[indice2]<-arreglo[i];
+			indice2<-indice2+1;
+		FinSi
+	FinPara
+	para i <- 0 hasta 19 con paso 1 Hacer
+		Escribir sin Saltar arreglo[i], " ";
+	FinPara
+	Escribir " ";
+	
+	Si indice1>0 Entonces
+		Escribir "Números pares:" Sin Saltar;
+		para i <- 1 hasta indice1-1 con paso 1 Hacer
+			Escribir Sin Saltar par[i], " ";
+		FinPara
+	SiNo
+		Escribir Sin Saltar "Sin elementos.";
+	FinSi
+	Escribir " ";
+	Si indice2 >0 Entonces
+		Escribir "Números impares:" Sin Saltar;
+		para i <- 1 hasta indice2-1 con paso 1 Hacer
+			Escribir sin Saltar impar[i], " ";
+		FinPara
+	SiNo
+		Escribir Sin Saltar "Sin elementos.";
+	FinSi
+FinSubProceso
+
+Proceso Punto2
+	Definir arreglo,par,impar,i,indice1,indice2, j Como Entero;
+	indice1<-1;
+	indice2<-1;
+	Dimension arreglo[20];
+	Dimension par[20];
+	Dimension impar[20];
+	
+	ParesImpares( );
+FinProceso
+					</code>
+				</pre>
+		</div>
+		<div class="accordion-item">
+            <input type="checkbox" name="acordeon" id="item16">
+            <label for="item16" class="acordeon-titulo">Punto N°16</label>
+				<pre class="acordeon-contenido">
+					<button class="botonCopiar" onclick="Ejecutar(this)" id="15">Copiar codigo</button>
+					<code class="code">				
+SubProceso numerosPrimos( )
+	Definir primo, contador, x Como Entero;
+	Para primo <- 1 Hasta 1000 Hacer
+		x <- 1;
+		contador <- 0;
+		Mientras x <= primo Hacer
+			si primo mod x == 0 Entonces
+				contador <- contador + 1;
+			FinSi
+			x<-x+1;
+		FinMientras
+		
+		si contador == 2 Entonces
+			Escribir Sin Saltar primo, ", ";
+		FinSi
+	FinPara
+FinSubProceso
+
+Proceso Punto3
+	Definir primo, contador, x Como Entero;
+	numerosPrimos( );
+	
+FinProceso
+					</code>
+				</pre>
+		</div>
+		<div class="accordion-item">
+            <input type="checkbox" name="acordeon" id="item17">
+            <label for="item17" class="acordeon-titulo">Punto N°17</label>
+				<pre class="acordeon-contenido">
+					<button class="botonCopiar" onclick="Ejecutar(this)" id="16">Copiar codigo</button>
+					<code class="code">				
+SubProceso definirArreglo( )
+	Definir fila, columna Como Entero;
+	Definir matriz Como Caracter;
+	Dimension matriz[4,5];
+	
+	matriz[0,0] <- "01";
+	matriz[0,1] <- "02";
+	matriz[0,2] <- "03";
+	matriz[0,3] <- "04";
+	matriz[0,4] <- "05";
+	matriz[1,0] <- "06";
+	matriz[1,1] <- "07";
+	matriz[1,2] <- "08";
+	matriz[1,3] <- "09";
+	matriz[1,4] <- "10";
+	matriz[2,0] <- "11";
+	matriz[2,1] <- "12";
+	matriz[2,2] <- "13";
+	matriz[2,3] <- "14";
+	matriz[2,4] <- "15";
+	matriz[3,0] <- "16";
+	matriz[3,1] <- "17";
+	matriz[3,2] <- "18";
+	matriz[3,3] <- "19";
+	matriz[3,4] <- "20";
+	
+	para fila<-0 Hasta 3 Con Paso 1 Hacer
+		Para columna<-0 Hasta 4 Con Paso 1 Hacer
+			Escribir matriz[fila, columna], " ", Sin Saltar;
+		FinPara
+		Escribir " ";
+	FinPara
+FinSubProceso
+
+SubProceso recorrerArreglo( )
+	Definir fila, columna Como Entero;
+	Definir matriz Como Caracter;
+	Dimension matriz[4,5];
+	
+	matriz[0,0] <- "01";
+	matriz[0,1] <- "02";
+	matriz[0,2] <- "03";
+	matriz[0,3] <- "04";
+	matriz[0,4] <- "05";
+	matriz[1,0] <- "06";
+	matriz[1,1] <- "07";
+	matriz[1,2] <- "08";
+	matriz[1,3] <- "09";
+	matriz[1,4] <- "10";
+	matriz[2,0] <- "11";
+	matriz[2,1] <- "12";
+	matriz[2,2] <- "13";
+	matriz[2,3] <- "14";
+	matriz[2,4] <- "15";
+	matriz[3,0] <- "16";
+	matriz[3,1] <- "17";
+	matriz[3,2] <- "18";
+	matriz[3,3] <- "19";
+	matriz[3,4] <- "20";
+	
+	Para fila <- 0 Hasta 0  Hacer
+		Para columna<-0 Hasta 0 Hacer
+			Escribir "  ", matriz[0,0], " ", matriz[0,1], " ", matriz[0,2], " ", matriz[0,3], " ", matriz[0,4], Sin Saltar ;
+		FinPara
+		
+	FinPara
+    
+	Escribir "";
+    
+	Para fila <- 1 Hasta 1 Hacer
+		Para columna<-1 Hasta 1 Hacer
+			Escribir "  ", matriz[1,4], " ", matriz[1,3], " ", matriz[1,2], " ", matriz[1,1], " ", matriz[1,0] Sin Saltar ;
+		FinPara
+		
+	FinPara
+    
+	Escribir "";
+    
+	Para fila <- 2 Hasta 2 Hacer
+		Para columna<-2 Hasta 2 Hacer
+			Escribir "  ", matriz[2,0], " ", matriz[2,1], " ", matriz[2,2], " ", matriz[2,3], " ", matriz[2,4] Sin Saltar ;
+		FinPara
+	FinPara
+    
+	Escribir "";
+    
+	Para fila <- 3 Hasta 3 Hacer
+		Para columna<-3 Hasta 3 Hacer
+			Escribir "  ", matriz[3,4], " ", matriz[3,3], " ", matriz[3,2], " ", matriz[3,1], " ", matriz[3,0] Sin Saltar ;
+		FinPara
+	FinPara
+    
+	Escribir "";
+FinSubProceso
+
+
+Proceso Punto4
+	Definir fila, columna Como Entero;
+	Definir matriz Como Caracter;
+	Dimension matriz[4,5];
+	
+	definirArreglo( );
+	recorrerArreglo( );
+	
+FinProceso
+					</code>
+				</pre>
+		</div>
+		<div class="accordion-item">
+            <input type="checkbox" name="acordeon" id="item18">
+            <label for="item18" class="acordeon-titulo">Punto N°18</label>
+				<pre class="acordeon-contenido">
+					<button class="botonCopiar" onclick="Ejecutar(this)" id="17">Copiar codigo</button>
+					<code class="code">				
+SubProceso tablasMultiplicar( )
+	Definir fila, columna, arreglo, j, x, num, matriz Como Entero;
+	Dimension matriz[10,10];
+	
+	Para j <- 1 Hasta 10 Con Paso 1 Hacer
+		Escribir " ", j, " " Sin Saltar;
+		Para x <- 1 Hasta 10 Con Paso 1 Hacer
+			Escribir "   ",x,  "x", j Sin Saltar;
+		FinPara
+		Escribir "";
+	FinPara
+	
+	Escribir "";
+	
+	Para fila <- 0 Hasta 9 Con Paso 1 Hacer
+		Para columna <- 0 Hasta 9 Con Paso 1 Hacer
+			matriz[fila,columna] <- fila * columna;
+		FinPara
+	FinPara
+	
+	Escribir "A continuación ingrese la fila que desea consultar: ";
+	Leer fila;
+	Escribir "A continuación ingrese la columna que desea consultar: ";
+	Leer columna;
+	Escribir "El resultado es: ", matriz[fila,columna];
+FinSubProceso
+
+Proceso Punto5
+	Definir fila, columna, arreglo, j, x, num, matriz Como Entero;
+	Dimension matriz[10,10];
+	
+	tablasMultiplicar( );	
+	
+FinProceso
+                </code>
+            </pre>
+        </div>
+		
+    </section>
+</body>
+</html>

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taller N°1 | PSeInt</title>
+    <link rel="stylesheet" href="/punto3/css/style.css">
+    <script src="/punto3/js/archivo.js"></script>
+</head>
+<body>
+    <header class="header" >
+        <h1>Taller N°1 PSeInt: Variables e impresión</h1> 
+    </header>
+    <nav>
+		<button class="botones">
+		    <a href="/punto3/tallerPseint/indexPseint.html">Ir a Talleres PSeInt</a>
+	    </button>
+	</nav>
+    
+<section>
+    <div class="accordion-item">
+        <input type="checkbox" name="acordeon" id="item1">
+        <label for="item1" class="acordeon-titulo">Punto N°1</label>
+        <p class="acordeon-contenido">               
+            1. Realizar un programa el cual solicite su nombre y apellidos.
+        </p>
+        
+        <pre class="acordeon-contenido"> 
+            <button class="botonCopiar" onclick="Ejecutar(this)" id="0">Copiar codigo</button>
+            <code class="code">
+            Proceso infoBasica
+	        Definir nombre Como Caracter;
+	        Definir apellidos Como Caracter;
+	
+	        nombre <- "Carmen";
+	        apellidos <- "Montiel Villegas";
+	
+	        Escribir "Por favor escriba su nombre:";
+	        Leer nombre;
+	        Escribir "Por favor escriba sus apellidos:";
+	        Leer apellidos;
+	
+            FinProceso
+        </code>
+        </pre>
+        
+    
+    </div>
+
+    <div class="accordion-item">
+        <input type="checkbox" name="acordeon" id="item2">
+        <label for="item2" class="acordeon-titulo">Punto N°2</label>
+        <p class="acordeon-contenido">
+            2. Realizar un programa el cual solicite su nombre, apellidos, edad y estatura.              
+        </p>
+        
+        <pre class="acordeon-contenido"> 
+            <button class="botonCopiar" onclick="Ejecutar(this)" id="1">Copiar codigo</button>
+            <code class="code">
+    Proceso infoPersonal
+    Definir nombre Como Caracter;
+	Definir apellidos Como Caracter;
+	Definir edad Como Entero;
+	Definir estatura Como Real;
+	
+	nombre <- "Carmen";
+	apellidos <- "Montiel Villegas";
+	edad <- 32;
+	estatura <- 1.54;
+	
+	Escribir "Por favor escriba su nombre:";
+	Leer nombre;
+	Escribir "Por favor escriba sus apellidos:";
+	Leer apellidos;
+	Escribir "¿Qué edad tiene?";
+	Leer edad;
+	Escribir "¿Cuál es su estatura?";
+	Leer estatura;
+	
+    FinProceso
+            </code>
+        </pre>		
+    </div>
+    
+    <div class="accordion-item">
+        <input type="checkbox" name="acordeon" id="item3">
+        <label for="item3" class="acordeon-titulo">Punto N°3</label>
+        <p class="acordeon-contenido">
+            3. Realizar un programa el cual solicite su nombre y apellidos, también debe capturar nombre y apellidos de su padre y madre. Al finalizar debe imprimir en pantalla el siguiente mensaje "Yo [Nombre Completo], soy hijo de [Nombre de la Madre] y [Nombre del Padre].        
+        </p>
+        
+        <pre class="acordeon-contenido">
+        <button class="botonCopiar" onclick="Ejecutar(this)" id="2">Copiar codigo</button>
+        <code class="code">
+            Proceso Parentezco
+	        Definir nombreCompleto Como Caracter;
+	        Definir padre Como Caracter;
+	        Definir madre Como Caracter;
+	
+	        nombreCompleto <- "Carmen Montiel Villegas";
+	        padre <- "Guillermo Montiel";
+	        madre <- "Carmen Villegas";
+	
+	        Escribir "Escriba su nombre y apellidos:";
+	        Leer nombreCompleto;
+	        Escribir "Escriba el nombre de su padre:";
+	        Leer padre;
+	        Escribir "Escriba el nombre de su madre:";
+	        Leer madre;
+	
+	        Limpiar Pantalla;
+	
+	        Escribir "Yo ", nombreCompleto, " ", "soy hija de ", madre, " ", "y ", padre;  
+	
+            FinProceso
+        </code>
+        </pre>		
+        </div>
+
+    <div class="accordion-item">
+        <input type="checkbox" name="acordeon" id="item4">
+        <label for="item4" class="acordeon-titulo">Punto N°4</label>
+        <p class="acordeon-contenido">
+            4. Realizar un programa el cual solicite el nombre de una ciudad capital y el país. Al finalizar debe imprimir en pantalla el siguiente mensaje "La ciudad [Nombre de la Ciudad], es la capital del país [Nombre del País]        
+        </p>
+    
+        <pre class="acordeon-contenido"> <!-- aqui va el codigo -->
+        <button class="botonCopiar" onclick="Ejecutar(this)" id="3">Copiar codigo</button>
+        <code class="code">
+            Proceso paisYciudad
+	        Definir ciudad Como Caracter;
+	        Definir pais Como Caracter;
+	
+	        ciudad <- "Canberra";
+	        pais <- "Australia";
+	
+	        Escribir "¿Qué país te gustaría conocer?";
+	        Leer pais;
+	        Escribir "¿Cuál es la capital de ese país?";
+	        Leer ciudad;
+	
+	        Limpiar Pantalla;
+	
+	        Escribir "La ciudad ", ciudad, " ", "es la capital del país ", pais, " ", "y me encantaría conocerla";
+	
+            FinProceso
+        </code>
+        </pre>		
+        </div>
+    
+    <div class="accordion-item">
+        <input type="checkbox" name="acordeon" id="item5">
+        <label for="item5" class="acordeon-titulo">Punto N°5</label>
+        <p class="acordeon-contenido">
+            5. Realizar un programa el cual solicite el nombre de su mascota, edad de la mascota, el tipo de mascota y su nombre completo. Al finalizar el sistema debe e imprimir en pantalla el siguiente mensaje: [Nombre de Mascota] es un(a) [Tipo de Mascota], el cual, tiene [Edad de la Mascota] años de edad y [Nombre Completo] es actualmente su dueño(a).        
+        </p>
+        
+        <pre class="acordeon-contenido">
+            <button class="botonCopiar" onclick="Ejecutar(this)" id="4">Copiar codigo</button>
+            <code class="code">
+    Proceso  datosMascota
+	Definir nombreMascota1 Como Caracter;
+	Definir nombreMascota2 Como Caracter;
+	Definir edadMascota1 Como Entero;
+	Definir edadMascota2 Como Entero;
+	Definir tipo Como Caracter;
+	Definir cantidad Como Entero;
+	Definir nombreAmoMascotas Como Caracter;
+	
+	nombreMascota1 <- "Sofi";
+	nombreMascota2 <- "Negrita";
+	edadMascota1 <- 2;
+	edadMascota2 <- 1;
+	tipo <- "gatas";
+	cantidad <- 2;
+	nombreAmoMascotas <- "Carmen Montiel";
+	
+	Escribir "¿Cuántas mascotas tienes?";
+	Leer cantidad;
+    Escribir "Escriba el nombre de una de las mascotas:";
+	Leer nombreMascota1;
+	Escribir "Edad de esta mascota:";
+	Leer edadMascota1;
+	Escribir "Escriba el nombre de la otra mascota:";
+	Leer nombreMascota2;
+	Escribir "Edad de esta mascota:";
+	Leer edadMascota2;
+	Escribir "¿Qué tipo de mascotas tienes?";
+	Leer tipo;
+    Escribir "¿Quién es el dueño de estas mascotas?";
+	Leer nombreAmoMascotas;
+	
+	Limpiar Pantalla;
+	
+	Escribir nombreMascota1, " ", "tiene ", edadMascota1, " ", "años de edad y ", nombreMascota2, " ", "tiene ", edadMascota2, " ", "año de edad, ambas son unas ", tipo, " ", "y su dueña es ", nombreAmoMascotas;
+	
+    FinProceso
+
+            </code>
+        </pre>		
+    </div>
+</section>
+    
+</body>
+</html>

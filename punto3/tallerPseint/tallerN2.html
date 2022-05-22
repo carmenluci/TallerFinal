@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taller N°2 | PSeInt</title>
+	<link rel="stylesheet" href="/punto3/css/style.css">
+	<script src="/punto3/js/archivo.js"></script>
+</head>
+<body>
+    <header class="header" >
+        <h1>Taller N°2 PSeInt: Condicionales</h1> 
+    </header>
+	<nav>
+		<button class="botones">
+		    <a href="/punto3/tallerPseint/indexPseint.html">Ir a Talleres PSeInt</a>
+	    </button>
+	</nav>
+    
+<section>
+    <div class="accordion-item">
+        <input type="checkbox" name="acordeon" id="item1">
+        <label for="item1" class="acordeon-titulo">Punto N°1</label>
+        <p class="acordeon-contenido">
+            1. Realizar un programa en el cual se solicite la edad de una persona. Si la persona es mayor o igual a 18 años, deberá mostrar en pantalla: Usted es mayor de edad.
+        </p>
+        
+        <pre class="acordeon-contenido">
+            <button class="botonCopiar" onclick="Ejecutar(this)" id="0">Copiar codigo</button>
+            <code class="code">
+    Proceso edadMayor
+	    Definir edad Como Entero;
+	
+	    Escribir "Escriba su edad";
+	    Leer edad;
+	    Si edad >= 18 Entonces
+		    Escribir "Usted es mayor de edad";
+	    FinSi
+	
+    FinProceso
+            </code>
+        </pre>
+    </div>
+    
+    <div class="accordion-item">
+        <input type="checkbox" name="acordeon" id="item2">
+        <label for="item2" class="acordeon-titulo">Punto N°2</label>
+        <p class="acordeon-contenido">
+            2. Realizar un programa en el cual se solicite la edad de una persona. Si la persona es menor a 18 años, deberá mostrar en pantalla: Usted aún es un niño(a).              
+        </p>
+        <pre class="acordeon-contenido"> 
+            <button class="botonCopiar" onclick="Ejecutar(this)" id="1">Copiar codigo</button>
+            <code class="code">
+    Proceso edadMenor
+	    Definir edad Como Entero;
+	
+	    Escribir "Escriba su edad:";
+	    Leer edad;
+	
+	    Si edad < 18 Entonces
+		    Escribir "Usted aún es un(a) niño(a)";
+	    FinSi
+	
+    FinProceso
+            </code>
+        </pre>
+    </div>
+
+    <div class="accordion-item">
+        <input type="checkbox" name="acordeon" id="item3">
+        <label for="item3" class="acordeon-titulo">Punto N°3</label>
+        <p class="acordeon-contenido">
+            3. Realizar un programa en el cual se solicite el nombre, apellidos y edad de la persona. Si la persona es mayor o igual a 18 años, entonce se deberá imprimir en pantalla [Nombre completo] usted es mayor de edad, por lo tanto puede entrar a la fiesta. Si laedad de la persona es menor que 18 años, entonces, deberá imprimirse el siguiente mensaje: [Nombre completo] usted es menor de edad, por lo tanto, no puede entrar a la fiesta, por favor devuélvase a su casa.       
+        </p>
+        
+        <pre class="acordeon-contenido">
+        <button class="botonCopiar" onclick="Ejecutar(this)" id="2">Copiar codigo</button>
+        <code class="code">
+			Proceso mayorOigual
+	        Definir nombreCompleto Como Caracter;
+	        Definir edad Como Entero;
+	
+	        Escribir "Escriba su nombre y apellidos:";
+	        Leer nombreCompleto;
+	        Escribir "¿Cuál es su edad?";
+	    Leer edad;
+	
+	    Si edad >= 18 Entonces
+		    Escribir nombreCompleto, " ", "usted es mayor de edad, por lo tanto puede entrar a la fiesta"; 
+	    SiNo
+		    Escribir nombreCompleto, " ", "usted es menor de edad, por lo tanto no puede entrar a la fiesta, por favor devuelvase a su casa";
+	    FinSi
+	
+    FinProceso
+        </code>
+    </pre>
+    </div>
+    <div class="accordion-item">
+        <input type="checkbox" name="acordeon" id="item4">
+        <label for="item4" class="acordeon-titulo">Punto N°4</label>
+        <p class="acordeon-contenido">
+            4. La video tienda que presta sus servicios de alquiler de películas a los usuarios del barrio el Porvenir, requiere de una aplicación que permita registrar el alquiler de las películas que adquieren sus usuarios. Para cada usuario se debe permitir la opción de alquilar película, consultar películas disponibles y recibir película en la video tienda con la opción de realizar anotaciones sobre estas si se llegan a presentar daños u otra novedad sobre la película.        
+        </p>
+        <pre class="acordeon-contenido">
+            <button class="botonCopiar" onclick="Ejecutar(this)" id="3">Copiar codigo</button>
+            <code class="code">
+    Proceso TiendaDeVideo
+	    Definir nombreUsuario Como Caracter;
+	    Definir opcion Como Entero;
+	    Definir tiposDePeliculas Como Caracter;
+	    Definir alquilarPelicula Como Caracter;
+        Definir devolverPelicula Como Caracter;
+	
+	    Escribir "Nombre de usuario:";
+	    Leer nombreUsuario;
+	    Escribir "Elija una opción";
+	    Escribir "1. Consultar películas disponibles";
+	    Escribir "2. Alquilar película";
+	    Escribir "3. Recibir película en la video tienda";
+	    Escribir "4. Devolver película";
+	    Leer opcion;
+	
+	Segun opcion Hacer
+		1: 
+			Escribir "- Terror";
+			Escribir "- Acción";
+			Escribir "- Romance";
+			Leer tiposDePeliculas;
+		2:
+			Escribir "Sí";
+			Escribir "No";
+			Leer alquilarPelicula;
+		3:
+			Escribir "Su película está disponible, puede recibirla en nuestra tienda";
+		4: 
+			Escribir "- Devuelvo esta película porque ya la vi, no recordaba";
+			Escribir "- Está en mal estado";
+			Escribir "- No me gusta la resolución de la película";
+			Leer devolverPelicula;
+	De Otro Modo:
+			Escribir "Gracias por visitar nuestra tienda, que tenga buen día";
+	FinSegun
+	
+    FinProceso
+        </code>
+        </pre>
+    </div>
+    
+    <div class="accordion-item">
+        <input type="checkbox" name="acordeon" id="item5">
+        <label for="item5" class="acordeon-titulo">Punto N°5</label>
+        <p class="acordeon-contenido">
+            5. La Droguería Mi Salud presta sus servicios en la localidad de Suba y requiere una aplicación para poder facturar los productos que vende a sus clientes y para ello, los productos tienen unas características que deben indicársele al cliente para que pueda escoger el producto a comprar. Para cada cliente, se tienen las opciones de compra de producto, consulta de precios por producto y devoluciones en caso de que se presenten.      
+        </p>
+        <pre class="acordeon-contenido">
+            <button class="botonCopiar" onclick="Ejecutar(this)" id="4">Copiar codigo</button>
+            <code class="code">
+    Proceso DrogueriaMiSalud
+	Definir productos Como entero;
+	Definir caracteristicas Como Caracter;
+	Definir devolucionProducto Como Logico;
+	Definir razonDevolucion Como Caracter;
+	
+	devolucionProducto <- Falso;
+	Escribir "¿Qué peoducto desea comprar?";
+	Escribir "1. Medicamentos de salud";
+	Escribir "2. Productos de aseo personal";
+	Escribir "3. Productos para el cuidado de la piel";
+	Leer productos;
+	
+	Segun productos Hacer
+		1:
+			Escribir "Tenemos una amplia lista de medicamentos para cuidar su salud y la de su familia";
+			Escribir "Diga el nombre de su medicamento:";
+			Leer caracteristicas;
+		2:
+			Escribir "Tenemos una amplia lista de productos en la línea de aseoa personal para usted y su familia";
+			Escribir "Diga el nombre de su producto de aseo personal:";
+			Leer caracteristicas;
+		3:
+			escribir "Tenemos una amplia lista de productos para el cuidado de la piel para usted y su familia";
+			Escribir "Diga el nombre de su producto para el cuidado de la piel:";
+			Leer caracteristicas;
+		De Otro Modo:
+			Escribir "¿Desea realizar la devolución de algún producto?";
+			Leer devolucionProducto;
+	FinSegun
+	
+	si devolucionProducto = Verdadero Entonces
+		Escribir "Nos gustaría conocer el motivo por el cual quiere hacer la devolución:";
+		Leer  razonDevolucion;
+	FinSi
+	
+FinProceso
+            </code>
+        </pre>		
+    </div>
+    
+    <div class="accordion-item">
+        <input type="checkbox" name="acordeon" id="item6">
+        <label for="item6" class="acordeon-titulo">Punto N°6</label>
+        <p class="acordeon-contenido">               
+            6. El taller de motos "El Maquinista" recibe motocicletas de alto cilindraje para realizar las respectivas revisiones y requiere una aplicación que le permita registrar los servicios generados a sus clientes. Para cada motocicleta se debe tener registro del ingreso al taller y las observaciones por parte del cliente. También debe existir registro de salida del taller con las novedades y otra de arreglos hechos por el mecánico en caso de que se requiera inventariar cambios repuestos en la motocicleta al entregarla.
+            
+        <pre class="acordeon-contenido">
+            <button class="botonCopiar" onclick="Ejecutar(this)" id="5">Copiar codigo</button>
+            <code class="code">
+    Proceso TallerMoto
+	Definir observacionesMoto Como Caracter;
+	Definir cliente Como Caracter;
+	Definir arreglos Como Caracter;
+	Definir serviciosDelTaller Como Entero;
+	Definir repuestos Como Caracter;
+	Definir estadoMoto Como Logico;
+	
+	Escribir "¿Qué servicio requiere el día de hoy en nuestro taller?";
+	Escribir "1. Dejar mi moto para arreglo";
+	Escribir "2. Retirar mi moto que está en el taller";
+	Leer serviciosDelTaller;
+	
+	Segun serviciosDelTaller Hacer
+		1:
+			Escribir "Nombre completo del propietario:";
+			Leer cliente;
+			Escribir "Diga que problemas o fallas presenta la moto:";
+			Leer observacionesMoto;
+		2:
+			Escribir "Su moto se encuentra lista para ser retirada del taller";
+			Escribir "Se realizó el siguiente arreglo:";
+			Leer arreglos;
+			Escribir "Se utilizaron los siguientes repuestos:";
+			Leer repuestos;
+			Escribir "¿Desea conocer el estado de su motocicleta antes de realizar el retiro del taller?";
+			Leer estadoMoto;
+			si estadoMoto = verdadero Entonces
+				Escribir "Su moto está en optimas condiciones y lista para retirar del taller";
+			FinSi
+			
+	FinSegun
+	
+FinProceso
+
+            </code>
+        </pre>
+    </div>
+    
+    <div class="accordion-item">
+        <input type="checkbox" name="acordeon" id="item7">
+        <label for="item7" class="acordeon-titulo">Punto N°7</label>
+        <p class="acordeon-contenido">               
+            7. La Secretaría de Salud Municipal requiere de una aplicación que le permita calcular el IMC (Índice de masa corporal) y requiere los datos peso en kilogramos y estatura en metros Para cada persona encuestada adicional a los datos suministrados, debe mostrar el resultado para cada uno y establecer en qué rango se encuentra (bajo peso, normal sobrepeso y obeso).
+            
+        <pre class="acordeon-contenido">
+            <button class="botonCopiar" onclick="Ejecutar(this)" id="6">Copiar codigo</button>
+            <code class="code">
+    Proceso CalculadoraDePeso
+	Definir imc Como Real;
+	Definir peso Como Real;
+	Definir estatura Como Real;
+	Definir nombrePaciente Como Caracter;
+	
+	
+	Escribir "Por favor escriba su nombre completo:";
+	Leer nombrePaciente;
+	Escribir "Por favor escriba su peso actual:";
+	Leer peso;
+	Escribir "Por favor escriba su estatura:";
+	Leer estatura;
+	
+	imc <- peso/(estatura*estatura);
+	
+	Escribir "A continuación se muestran los resultados de su I.M.C";
+	
+	si imc < 18.5 Entonces
+		Escribir "Usted tiene bajo peso";
+	SiNo
+		si imc >= 18.5 y imc <= 24.9 Entonces
+			Escribir "Su peso es normal";
+		SiNo
+			si imc >= 25.0 y imc <= 30 Entonces
+				Escribir "Usted tiene sobre peso";
+			SiNo
+				Escribir "Usted es obeso";
+			FinSi
+		FinSi
+	FinSi
+	
+	
+FinProceso
+            </code>
+        </pre>
+    </div>
+    
+    <div class="accordion-item">
+        <input type="checkbox" name="acordeon" id="item8">
+        <label for="item8" class="acordeon-titulo">Punto N°8</label>
+        <p class="acordeon-contenido">               
+            8. El pastelero Don Carlos es el mejor pastelero de la ciudad y requiere una aplicación que le permita registrar los pedidos de los clientes en cuanto a las tortas que realiza. Cada torta tiene unas características propias como sabor, cantidad (porciones) y decoraciones). Se requiere que la aplicación permita registrar los pedidos, las tortas disponibles y las ventas que se registren diariamente.
+            
+        <pre class="acordeon-contenido">
+            <button class="botonCopiar" onclick="Ejecutar(this)" id="7">Copiar codigo</button>
+            <code class="code">
+    Proceso pasteleria
+	Definir nombreCliente Como Caracter;
+	Definir opciones Como Entero;
+	Definir cantidad Como Entero;
+	Definir precio Como Entero;
+	Definir opcionCompra Como Logico;
+	Definir precioTorta1L Como Real;
+	Definir precioTortaMediaL Como Real;
+	
+	precioTorta1L <- 25.000;
+	precioTortaMediaL <- 18.000;
+	
+	Escribir "Escriba su nombre y apellidos:";
+	Leer nombreCliente;
+	Escribir "Elija una opción de nuestro menú de tortas:";
+	Escribir "1. Torta de chocolate de 1 libra";
+	Escribir "2. Torta de chocolate de 1/2 libra";
+	Escribir "3. Torta de zanahoria de 1 libra";
+	Escribir "4. Torta de zanahoria de 1/2 libra";
+	Leer opciones;
+	
+	Segun opciones Hacer
+		1:
+			Escribir "¿Desea comprar torta de chocolate de 1 libra?";
+			Leer opcionCompra;
+			si opcionCompra = Verdadero Entonces
+				Escribir "¿Cuántas tortas desea llevar?";
+				Leer cantidad;
+			FinSi
+			Escribir "El valor de su compra es:";
+			Leer precioTorta1L;
+			Escribir "Gracias por su compra";
+		2:
+			Escribir "¿Desea comprar torta de chocolate de 1/2 libra?";
+			Leer opcionCompra;
+			si opcionCompra = Verdadero Entonces
+				Escribir "¿Cuántas tortas desea llevar?";
+				Leer cantidad;
+			FinSi
+			Escribir "El valor de su compra es:";
+			Leer precioTortaMediaL;
+			Escribir "Gracias por su compra";
+		3:
+			Escribir "¿Desea comprar torta de zanahoria de 1 libra?";
+			Leer opcionCompra;
+			si opcionCompra = Verdadero Entonces
+				Escribir "¿Cuántas tortas desea llevar?";
+				Leer cantidad;
+			FinSi
+			Escribir "El valor de su compra es:";
+			Leer precioTorta1L;
+			Escribir "Gracias por su compra";
+		4:
+			Escribir "¿Desea comprar torta de zanahoria de 1/2 libra?";
+			Leer opcionCompra;
+			si opcionCompra = Verdadero Entonces
+				Escribir "¿Cuántas tortas desea llevar?";
+				Leer cantidad;
+			FinSi
+			Escribir "El valor de su compra es:";
+			Leer precioTortaMediaL;
+			Escribir "Gracias por su compra";
+	FinSegun
+	
+FinProceso
+            </code>
+        </pre>
+    </div>
+    
+    <div class="accordion-item">
+        <input type="checkbox" name="acordeon" id="item9">
+        <label for="item9" class="acordeon-titulo">Punto N°9</label>
+        <p class="acordeon-contenido">               
+            9. El profesor de geometría está explicando a sus estudiantes las fórmulas para calcular el área de diferentes figuras geométricas, para ello requiere una aplicación que le facilite el ejercicio solicitándole los valores al estudiante. La aplicación debe permitir que el estudiante seleccione si desea calcular el área de un rectángulo, triángulo o trapecio. No olvide solicitar los datos necesarios para realizar cada cálculo y mostrar su respectivo resultado.
+        
+        <pre class="acordeon-contenido">
+            <button class="botonCopiar" onclick="Ejecutar(this)" id="8">Copiar codigo</button>
+            <code class="code">
+    Proceso areaFiguras
+	Definir altura Como Real;
+	Definir ancho Como Real;
+	Definir largo Como Real;
+	Definir totalRectangulo, totalTriangulo,  totalTrapecio Como Real;
+	Definir baseTriangulo, baseTrapecio1, baseTrapecio2 Como Real;
+	Definir figurasGeometricas Como Entero;
+	Definir nombreEstudiante Como Caracter;
+	
+	Escribir "Nombre del estudiante:";
+	Leer nombreEstudiante;
+	Escribir "Taller, debe calcular el aáea de las siguientes figuras geométricas:";
+	Escribir "1. Área de rectángulo";
+	Escribir "2. Área de triángulo";
+	Escribir "3. Área de trapecio";
+	Leer figurasGeometricas;
+	
+	Segun figurasGeometricas Hacer
+		1:
+			Escribir "Calcular el área del rectángulo";
+			Escribir "¿Cuánto mide el largo de tu rectángulo?";
+			Leer largo;
+			Escribir "¿Cuánto ide el ancho de tu retángulo?";
+			Leer ancho;
+			totalRectangulo <- largo*ancho;
+			Escribir "El área del rectángulo es: ", totalRectangulo;
+		2:
+			Escribir "Calcular el área del triángulo";
+			Escribir "¿Cuál es el valor de la base de tu triángulo?";
+			Leer baseTriangulo;
+			Escribir "¿Cuánto mide la altura de tu triángulo?";
+			Leer altura;
+			totalTriangulo <- (baseTriangulo*altura)/2;
+			Escribir "El área del triángulo es: ", totalTriangulo;
+		3:
+			Escribir "Calcular el área del trapecio";
+			Escribir "¿Cuál es el valor de la base1 de tu trapecio?";
+			Leer baseTrapecio1;
+			Escribir "¿Cuál es el valor de la base2 de tu trapecio?";
+			Leer baseTrapecio2;
+			Escribir "¿Cuánto mide la altura de tu trapecio?";
+			Leer altura;
+			totalTrapecio <- (baseTrapecio1+baseTrapecio2)*altura/2;
+			Escribir "El área del trapecio es: ", totalTrapecio;
+	FinSegun
+	
+FinProceso
+            </code>
+        </pre>
+    </div>
+    
+    <div class="accordion-item">
+        <input type="checkbox" name="acordeon" id="item10">
+        <label for="item10" class="acordeon-titulo">Punto N°10</label>
+        <p class="acordeon-contenido">               
+            10. El banco "Su banco fiel" es un banco que inicia sus actividades financieras y necesita una aplicación para llevar las cuentas de sus usuarios; por lo tanto, se sugiere que la cuenta tenga los atributos titular y cantidad. Para cada cliente las cuentas permitirán realizar ingresos, retiros o consultas de valor. En los ingresos no se pueden insertar valores negativos y para los retiros el valor no puede ser mayor al valor que tiene en la cuenta.
+        
+        <pre class="acordeon-contenido">
+            <button class="botonCopiar" onclick="Ejecutar(this)" id="9">Copiar codigo</button>
+            <code class="code">
+    Proceso Banco
+	Definir cliente Como Caracter;
+	Definir numeroCuenta Como Entero;
+	Definir consultarSaldo Como Entero;
+	Definir depositar Como Entero;
+	Definir retirar Como Entero;
+	Definir saldo Como Entero;
+	Definir serviciosBanco Como Entero;
+	
+	saldo <- 0;
+	
+	Escribir "Su Banco Fiel";
+	Escribir "Nombre Cliente:";
+	Leer cliente;
+	Escribir "Número de Cuenta:";
+	Leer numeroCuenta;
+	Escribir "Estos son nuestros servicios, seleccione la opción que desea realizar";
+	Escribir "1. Realizar deposito";
+	Escribir "2. Realizar retiro";
+	Escribir "3. Realizar consulta de saldo";
+	Leer serviciosBanco;
+	
+	Segun serviciosBanco Hacer
+		1:
+			Escribir "¿Cuánto es el monto de su depósito o consignación? (el depósito mínimo es de 5 pesos)";
+			Leer depositar;
+			si depositar >= 5 Entonces
+				Escribir "Su depósito se ha realizado con éxito";
+			SiNo
+				Escribir "Operación inválida, el monto mínimo debe ser de 5 pesos";
+			FinSi
+			saldo <- saldo+depositar;
+		2:
+			Escribir "¿Cuánto desea retirar?";
+			Leer retirar;
+			si retirar <= saldo Entonces
+				Escribir "Su retiro se ha realizado con éxito";
+				saldo <- saldo-retirar;
+			SiNo
+				Escribir "Saldo insuficiente";
+			FinSi
+		3:
+			Escribir "Su saldo es: ", saldo;
+		De Otro Modo:
+			Escribir "Esta opción es invalida, por favor verifique nuestras opciones, que tenga un buen día";
+	FinSegun
+	
+FinProceso
+            </code>
+        </pre>
+    </div>
+</section>
+    
+</body>
+</html>

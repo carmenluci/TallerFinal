@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taller N°3 | PSeInt</title>
+	<link rel="stylesheet" href="/punto3/css/style.css">
+	<script src="/punto3/js/archivo.js"></script>
+</head>
+<body>
+    <header class="header" >
+        <h1>Taller N°3 PSeInt: Ciclos</h1> 
+    </header>
+	<nav>
+		<button class="botones">
+		    <a href="/punto3/tallerPseint/indexPseint.html">Ir a Talleres PSeInt</a>
+	    </button>
+	</nav>
+
+    <section>
+        <div class="accordion-item">
+            <input type="checkbox" name="acordeon" id="item1">
+            <label for="item1" class="acordeon-titulo">Punto N°1</label>
+            <p class="acordeon-contenido">               
+                1. Realizar la siguiente figura por medio del ciclo Para <br>
+                *<br>**<br>***<br>****<br>*****<br>******<br>*******<br>********<br>*********<br>
+                **********
+            </p>
+            <pre class="acordeon-contenido">
+                <button class="botonCopiar" onclick="Ejecutar(this)" id="0">Copiar codigo</button>
+                <code class="code">
+Proceso arbolitoMedio
+	Definir i, j Como Entero;
+	
+	Para i<-1 Hasta 10 Con Paso 1 Hacer
+		Para j<-1 Hasta i Con Paso 1 Hacer
+			Escribir "*", " " Sin Saltar;
+		FinPara
+		Escribir " ";
+	FinPara
+	
+FinProceso
+                </code>
+            </pre>
+        </div>
+        
+        <div class="accordion-item">
+            <input type="checkbox" name="acordeon" id="item2">
+            <label for="item2" class="acordeon-titulo">Punto N°2</label>
+            <p class="acordeon-contenido">
+                2. Realizar la siguiente figura por medio del ciclo Mientras - Hacer <br>
+                &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp *<br> 
+                &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp **<br>
+                &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp ***<br>
+                &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp ****<br>&nbsp &nbsp &nbsp &nbsp &nbsp *****<br>
+                &nbsp &nbsp &nbsp &nbsp ******<br>&nbsp &nbsp &nbsp *******<br>&nbsp &nbsp ********<br>&nbsp *********<br>
+                **********<br>
+            </p>
+            
+            <pre class="acordeon-contenido">
+                <button class="botonCopiar" onclick="Ejecutar(this)" id="1">Copiar codigo</button>
+                <code class="code">
+Proceso TrianguloAlaIzquierda
+	Definir lineas Como Entero;
+	Definir i, j, k Como Entero;
+	lineas <- 10;
+	i <- 0;
+	j <- 0;
+	k <- 0;
+	
+	Mientras i <= lineas Hacer
+		Mientras j <= lineas - i Hacer
+			Escribir " " sin saltar;
+			j<-j+1;
+		FinMientras
+		Mientras k <= i Hacer
+			Escribir "*" Sin Saltar;
+			k<-k+1;
+		FinMientras
+		Escribir  "";
+		i<-i+1;
+		j<-0;
+		k<-0;
+	FinMientras
+	
+FinProceso
+                </code>
+            </pre>
+        </div>
+        
+        <div class="accordion-item">
+            <input type="checkbox" name="acordeon" id="item3">
+            <label for="item3" class="acordeon-titulo">Punto N°3</label>
+            <p class="acordeon-contenido">
+                3. Realizar la siguiente figura por medio del ciclo Repetir - Hasta Que <br>                   
+                &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp *<br>
+                &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp ***<br>
+                &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp *****<br>
+                &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp *******<br>
+                &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp *********<br>&nbsp &nbsp &nbsp &nbsp &nbsp ***********<br>
+               &nbsp &nbsp &nbsp &nbsp *************<br>&nbsp &nbsp &nbsp ***************<br>&nbsp &nbsp *****************<br>&nbsp *******************<br>
+               *********************<br>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp ***<br>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp ***<br>
+               &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp *****<br>
+                &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp *******<br>
+            </p>
+            
+            <pre class="acordeon-contenido">
+                <button class="botonCopiar" onclick="Ejecutar(this)" id="2">Copiar codigo</button>
+                <code class="code">
+Proceso arbolito
+	
+	Definir base, i, espacio, asterisco Como Entero;
+	base <- 10;
+	
+	Repetir
+		Para i<- 1 Hasta base Con paso 1 Hacer
+			Para espacio <- 1 Hasta base-i Con Paso 1 Hacer
+				Escribir Sin saltar "  ";
+			FinPara
+			Para asterisco <- 1 Hasta i Con paso 1 Hacer
+				Escribir Sin Saltar " *  ";
+			FinPara
+			Escribir "";
+		FinPara
+		Escribir "                  ***";
+		Escribir "                  ***";
+		Escribir "                 *****";
+		Escribir "                *******";
+	Hasta Que i=asterisco;	
+FinProceso
+                </code>
+            </pre>
+        </div>
+        
+        <div class="accordion-item">
+            <input type="checkbox" name="acordeon" id="item4">
+            <label for="item4" class="acordeon-titulo">Punto N°4</label>
+            <p class="acordeon-contenido">
+                4. Se requiere un programa que pueda crear la tabla de multiplicar del número que el usuario indique por medio del ciclo Para; esta debe ser impresa del 1 al 10. Ejemplo, si el usuario indica que desea crear la tabla del 5, entonces el resultado debería ser el siguiente: <br>1 x 5 = 5 <br> 2 x 5 = 10 <br> 3 x 5 = 15 <br> 4 x 5 = 20 <br> 5 x 5 = 25 <br> 6 x 5 = 30 <br> 7 x 5 = 35 <br> 8 x 5 = 40 <br> 9 x 5 = 45 <br> 10 x 5 = 50
+            </p>
+            
+            <pre class="acordeon-contenido">
+                <button class="botonCopiar" onclick="Ejecutar(this)" id="3">Copiar codigo</button>
+                <code class="code">
+Proceso TablaDeMultiplicar
+	Definir tabla, i, resultado Como Entero;
+	
+	Escribir "Ingrese el número de la tabla que desea ejecutar:";
+	Leer tabla;
+	
+	Para i<-1 Hasta 10 Con Paso 1 Hacer
+		resultado <- tabla * i;
+		Escribir tabla, " X ", i, " = ", resultado;
+	FinPara
+	
+FinProceso
+                </code>
+            </pre>
+        </div>
+        
+        <div class="accordion-item">
+            <input type="checkbox" name="acordeon" id="item5">
+            <label for="item5" class="acordeon-titulo">Punto N°5</label>
+            <p class="acordeon-contenido">
+                5. Utilizando el ciclo que usted desee, crear un menú de ejecución infinita hasta que el usuario desee terminar dicho ciclo.  <br>Menú de usuario<br>1. Captura nombre<br>2. Saludar persona<br>3. Salir del sistema
+            </p>
+            <pre class="acordeon-contenido">
+                <button class="botonCopiar" onclick="Ejecutar(this)" id="4">Copiar codigo</button>
+                <code class="code">
+                    Proceso menu
+Definir opciones Como Entero;
+	Definir nombre Como Caracter;
+	Escribir "Menú de ususario";
+	Repetir
+		Escribir "Elija una opción:";
+		Escribir "1. Captura nombre";
+		Escribir "2. Saludar persona";
+		Escribir "3. Salir del sistema";
+		Leer opciones;
+		
+		Segun opciones Hacer
+			1:
+				Escribir "Escriba su nombre por favor:";
+				Leer nombre;
+			2:
+				Escribir "Hola, ", nombre;
+			3:
+				Escribir "Gracias, que tenga un buen día";
+		FinSegun
+	Hasta Que opciones = 3
+	
+	
+FinProceso
+                </code>
+            </pre>		
+        </div>
+            
+        <div class="accordion-item">
+            <input type="checkbox" name="acordeon" id="item6">
+            <label for="item6" class="acordeon-titulo">Punto N°6</label>
+            <p class="acordeon-contenido">               
+                6. Se está creando una aplicación que va a estar conectada con un prototipo que permita almacenar contactos telefónicos en el dispositivo. Para ello cada contacto debe contener nombre completo, teléfono y organización. Se requiere que la aplicación permita añadir 3 contactos verificando que el número no esté almacenado, buscar contactos almacenados y eliminar contactos si el usuario lo requiere. Recuerde que el sistema debe terminar cuando el usuario así lo indique.
+            </p>
+            <pre class="acordeon-contenido">
+                <button class="botonCopiar" onclick="Ejecutar(this)" id="5">Copiar codigo</button>
+                <code class="code">
+Proceso contactosTelefono
+	Definir nombre1 , nombre2 , nombre3 Como Caracter;
+	Definir telefono1, telefono2, telefono3 Como Caracter;
+	Definir organizacion1, organizacion2, organizacion3 Como Caracter;
+	Definir opcion, opcionContacto, eliminar Como Entero;
+	Definir contacto1, contacto2, contacto3 Como Caracter;
+	
+	contacto1 <- "Carmen Montiel";
+	contacto2 <- "Sandy Benitez";
+	contacto3 <- "Juan Montiel";
+	telefono1 <- "3126037934";
+	telefono2 <- "3005556677";
+	telefono3 <- "3014445566";
+	organizacion1 <- "Sofka";
+	organizacion2 <- "SAS";
+	organizacion3 <- "bnm";
+	
+	Repetir
+	Escribir "Indique qué desea realizar";
+	Escribir "1. Registrar Contacto ";
+	Escribir "2. Consultar Contactos ";
+	Escribir "3. Eliminar Contactos ";
+	Leer opcion;
+	Segun opcion Hacer
+		1:
+			Escribir "Nombre y Apellidos:";
+			leer nombre1;
+			Escribir "Número de teléfono:";
+			leer telefono1;
+			Escribir "Organizacion o empresa:";
+			leer organizacion1;
+			Escribir "Tu contacto se ha guardado: ","Nombre: ", nombre1 , " ", "teléfono ", " ", telefono1 , " organización ", " ", organizacion1;
+			Leer contacto1;
+			
+			Escribir "Nombre y Apellidos:";
+			leer nombre2;
+			Escribir "Número de teléfono:";
+			leer telefono2;
+			Escribir "Organizacion o empresa:";
+			leer organizacion2;
+			Escribir "Tu contacto se ha guardado: ","Nombre: ", nombre2 , " ", " teléfono ", " ", telefono2 , " organización ", " ", organizacion2;
+			Leer contacto2;
+			
+			Escribir "Nombre y Apellidos:";
+			leer nombre3;
+			Escribir "Número de teléfono:";
+			leer telefono3;
+			Escribir "Organizacion o empresa:";
+			leer organizacion3;
+			Escribir "Tu contacto se ha guardado: ", "Nombre: ",  nombre3, " ", " teléfono ", " ", telefono3, " organización ", " ", organizacion3;
+			Leer contacto3;
+		2:
+			Escribir " consultar: ";
+			Escribir " Contacto 1 ";
+			Escribir " Contacto 2";
+			Escribir " Contacto 3";
+			Leer opcionContacto;
+			Segun opcionContacto Hacer
+					
+				1:Escribir "Informacion de contacto: ", " ", nombre1, " ", telefono1, " ", organizacion1;
+				2:Escribir "Informacion de contacto: ", " ", nombre2, " ", telefono2, " ", organizacion2;
+				3:Escribir " La informacion de contacto es la siguiente : ", " ", nombre3, " ", telefono3, " ", organizacion3;
+				De Otro Modo:
+					Escribir "Opción no permitida, elija otra opción "; Leer  opcionContacto;
+			FinSegun
+		3:
+			Escribir "Qué contacto desea eliminar:";
+			Escribir " Contacto 1 ";
+			Escribir " Contacto 2";
+			Escribir " Contacto 3";
+			Leer eliminar;
+			Segun eliminar Hacer
+				1:Escribir "Este contacto será eliminado: ", " ", contacto1;
+				2:Escribir "Este contacto será eliminado: ", " ", contacto2;
+				3:Escribir "Este contacto será eliminado: ", " ", contacto3;
+				De Otro Modo:
+					Escribir "Opción no valida"; Leer  opcionContacto;
+			FinSegun
+			
+		De Otro Modo:
+			Escribir "Opción incorrecta " , " ", "Presiona cualquier tecla para salir ";
+			Limpiar Pantalla;
+	FinSegun
+Hasta Que opcion == 4;
+Escribir "Salir";
+FinProceso
+                </code>
+            </pre>
+        </div>
+            
+        <div class="accordion-item">
+            <input type="checkbox" name="acordeon" id="item7">
+            <label for="item7" class="acordeon-titulo">Punto N°7</label>
+            <p class="acordeon-contenido">               
+                7. El parqueadero "El guardián" presta sus servicios de parqueadero nocturno para los usuarios del barrio y requiere una aplicación que permita registrar los vehículos que se cuidan en estas instalaciones. Se sugiere que el parqueadero tenga los atributos del vehículo como son, placa y marca, y los datos del cliente como son nombre completo y número de teléfono. Para cada vehículo se debe permitir la opción de ingresar al parqueadero, retirar del parqueadero y consultar si un vehículo se encuentra en el parqueadero. Recuerde que el sistema debe terminar cuando el usuario así lo indique. Tenga en presente que el parqueadero solo puede almacenar máximo 5 vehículos.
+
+            <pre class="acordeon-contenido">
+                <button class="botonCopiar" onclick="Ejecutar(this)" id="6">Copiar codigo</button>
+                <code class="code">
+Proceso parqueadero
+	Definir nombreC1, nombreC2, nombreC3, nombreC4, nombreC5 Como Caracter;
+	Definir telefonoC1, telefonoC2, telefonoC3, telefonoC4, telefonoC5 Como caracter;
+	Definir placaC1, placaC2, placaC3, placaC4, placaC5 Como Caracter;
+	Definir marcaC1, marcaC2, marcaC3, marcaC4, marcaC5 Como Caracter;
+	Definir opcParqueadero Como Entero;
+	Definir vehiculoPresente Como Logico;
+	
+	vehiculoPresente <- Falso;
+	
+	Repetir
+		Escribir "Bienvenidos a su parquedero de confianza EL GUARDIAN";
+		Escribir "=====================================================";
+	    Escribir "Elija una opción:";
+	    Escribir "1. Ingresar vehículo";
+	    Escribir "2. Retirar vehículo";
+	    Escribir "3. Verificar que mi vehículo esté en el parqueadero";
+	    Leer opcParqueadero;
+	
+	Segun opcParqueadero Hacer
+		1:
+			Escribir "Nombre del propietario:";
+			Leer nombreC1;
+			Escribir "Número de contacto:";
+			Leer telefonoC1;
+			Escribir "Marca del vehículo:";
+			Leer marcaC1;
+			Escribir "Placa del vehículo";
+			Leer placaC1;
+			Escribir "Gracias por confiar su vehículo a nuestro cuidado";
+			Escribir "==================================================";
+			
+			Escribir "Nombre del propietario:";
+			Leer nombreC2;
+			Escribir "Número de contacto:";
+			Leer telefonoC2;
+			Escribir "Marca del vehículo:";
+			Leer marcaC2;
+			Escribir "Placa del vehículo";
+			Leer placaC2;
+			Escribir "Gracias por confiar su vehículo a nuestro cuidado";
+			Escribir "==================================================";
+			
+			Escribir "Nombre del propietario:";
+			Leer nombreC3;
+			Escribir "Número de contacto:";
+			Leer telefonoC3;
+			Escribir "Marca del vehículo:";
+			Leer marcaC3;
+			Escribir "Placa del vehículo";
+			Leer placaC3;
+			Escribir "Gracias por confiar su vehículo a nuestro cuidado";
+			Escribir "==================================================";
+			
+			Escribir "Nombre del propietario:";
+			Leer nombreC4;
+			Escribir "Número de contacto:";
+			Leer telefonoC4;
+			Escribir "Marca del vehículo:";
+			Leer marcaC4;
+			Escribir "Placa del vehículo";
+			Leer placaC4;
+			Escribir "Gracias por confiar su vehículo a nuestro cuidado";
+			Escribir "==================================================";
+			
+			Escribir "Nombre del propietario:";
+			Leer nombreC5;
+			Escribir "Número de contacto:";
+			Leer telefonoC5;
+			Escribir "Marca del vehículo:";
+			Leer marcaC5;
+			Escribir "Placa del vehículo";
+			Leer placaC5;
+			Escribir "Gracias por confiar su vehículo a nuestro cuidado";
+			Escribir "==================================================";
+		2:
+			Escribir "A continuación usted procederá a retirar su vehículo de nuestro parqueadero";
+			Escribir "Digite sus datos";
+			Escribir "Nombre propietario";
+			Leer nombreC1;
+			Escribir "Placa del vehículo";
+			Leer placaC1;
+			Escribir "Su vehículo tiene orden de retiro, gracias por utilizar nuestro servicio";
+			Escribir "=====================================================";
+		3:
+			si vehiculoPresente = Verdadero Entonces
+				Escribir "Su vehículo se encuentra en nuestro parqueadero";
+			SiNo
+				Escribir "Ya su vehículo fue retirado, esperamos que pronto vuelva a utilizar nuestro servicio";
+			FinSi
+	FinSegun
+	Hasta Que opcParqueadero == 3;
+FinProceso
+                </code>
+            </pre>
+        </div>
+            
+        <div class="accordion-item">
+            <input type="checkbox" name="acordeon" id="item8">
+            <label for="item8" class="acordeon-titulo">Punto N°8</label>
+            <p class="acordeon-contenido">               
+                8. La escuela automovilística "El Maestro" requiere una aplicación que permita registrar a sus clientes en los cursos de enseñanza automovilística y establecer quienes lo han aprobado para continuar con el trámite de adquirir la licencia de conducción. Para cada usuario se debe permitir registrar su ingreso al curso, consultar usuarios que hayan presentado el curso y resultados de la prueba del curso (si fueron aprobados o no). Recuerde que el sistema debe terminar cuando el usuario así lo indique. Tenga presente que la escuela tiene capacidad máxima de gestionar 8 usuarios en su totalidad.
+
+            <pre class="acordeon-contenido">
+                <button class="botonCopiar" onclick="Ejecutar(this)" id="7">Copiar codigo</button>
+                <code class="code">
+Proceso EscuelaAuto
+	Definir nAlum Como Caracter;
+	Definir docAlum Como Caracter;
+	Definir edadAlum  Como Entero;
+	Definir alumno Como Entero;
+	Definir opcEscuela Como Entero;
+	Definir alumRegistrado Como Logico;
+	
+	alumRegistrado <- Verdadero;
+	
+	Repetir
+		Escribir "Bienvenido a nuestra escuela elija la opción que desea realizar:";
+		Escribir "1. Registrarse en nuestros cursos";
+		Escribir "2. Consultar aprobación del curso";
+		Escribir "3. salir de la aplicación";
+		Leer opcEscuela;
+		
+		Segun opcEscuela Hacer
+		1:	
+		Repetir
+		    Escribir "Escuela de automovilismo EL MAESTRO";
+		    Escribir "********************************************************************";
+		    Escribir " ";
+		    Escribir "Registrese si desea hacer parte de nuestros cursos de automovilismo";
+		    Escribir "Nombre completo:";
+		    Leer nAlum;
+		    Escribir "Documento de identidad:";
+		    Leer docAlum;
+		    Escribir "Edad:";
+		    Leer edadAlum;
+		    Escribir "====================================================================";
+		    Escribir "Número de alumno registrado:";
+		    Leer alumno;
+		Hasta Que alumno == 8;
+	    2:
+		    Escribir "Nombre alumno:";
+		    Leer nAlum;
+		    Escribir "Documento de identidad";
+		    Leer docAlum;
+		si alumRegistrado = Verdadero Entonces
+			Escribir "Usted aprobó el curso";
+		SiNo
+			Escribir "Usted no aprobó el curso";
+		FinSi
+		Escribir " ";
+		Escribir "=========================================================";
+	    3:
+		    Escribir "Gracias, que tenga un buen día";
+
+FinSegun
+Hasta Que opcEscuela == 3;
+FinProceso
+
+                </code>
+            </pre>
+        </div>   
+    </section>
+</body>
+</html>
