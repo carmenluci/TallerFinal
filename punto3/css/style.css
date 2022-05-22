@@ -1,0 +1,153 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Verdana, sans-serif;   
+    width:1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+header img{
+    width: 10%;
+    border: 10px;
+    position: static;
+    box-shadow: 10px 25px 10px;
+    border: 2px solid gray;
+}
+h1{
+    color: brown;
+}
+
+footer{
+    background-color: #dcb889bb;
+}
+#descarga a {
+    text-decoration: none;
+    color: #813845;
+    background-color: burlywood;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.sectionCentral{
+    margin: auto;
+    display: inline-block;
+    border: 2px solid gray;
+    box-shadow: 10px 25px 10px;
+}
+.contenedor{
+    background-color: cornsilk;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px #d6a86f;
+    width: 400px;
+    margin: 0 auto;
+    max-width: 100%;
+    padding: 20px;
+}
+
+.header{
+    border-radius: 5px;
+    box-shadow: 0 2px 5px #d6a86f;
+    padding: 10px 40px;
+    width: 400px;
+    margin: 0 auto;
+}
+.botones{
+    cursor: pointer;
+    background-color: burlywood;
+    border: 2px solid #dcd0899b;
+    border-radius: 4px;
+    font-size: 16px;
+    text-decoration: none; 
+}
+
+.button{
+    cursor: pointer;
+    background-color: #dc8f89;
+    border: 2px solid #dc8f89;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 16px;
+    height: 50px;
+    text-decoration: none; 
+    text-align: center;
+}
+
+.accordion-item input{
+    display: none;
+}
+
+.acordeon-titulo{
+    display: block;
+    padding: 15px;
+    background: #d6a86f;
+    color: #fff;
+    cursor: pointer;
+    border-bottom: 2px solid #d9c97d;
+}
+
+.acordeon-titulo:hover{
+    background-color: #aa5c67;        
+}
+
+.acordeon-contenido{
+    height: 0;
+    overflow: hidden;
+    margin: 0;
+    transition: all 0.5s;
+}
+
+.accordion-item input:checked ~ .acordeon-contenido{
+    height: auto;
+    margin: 10px 0;
+    
+}
+
+.accordion-item input:checked ~ pre{
+    padding: 10px;  
+    background-color: #fffbf4;
+    border-radius: 4px;
+
+}
+
+.botonCopiar{
+    cursor: pointer;
+    background-color: #fffbf4;
+    border: 2px solid #813845;
+    border-radius: 4px;
+    color: black;
+    font-size: 15px;
+    float: right;
+        
+}
+
+.botonCopiar:hover,.botonDescargar:hover{
+    cursor: pointer;
+    background-color: #e2e2e2;
+    border: 2px solid #d9c97d;
+    border-radius: 4px;
+    color: black;
+    
+    
+}
+
+.botonDescargar{
+    padding: 10px;
+    cursor: pointer;
+    background-color: #dc8f89;
+    border: 2px solid #813845;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 16px;
+    height: 50px;
+    text-decoration: none; 
+    text-align: center;
+}
+
+.logo{
+    width: 40px;
+    height: auto;
+    margin-left: auto;
+	margin-right: auto;
+}
