@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taller N°3 | Java</title>
+    <link rel="stylesheet" href="/punto3/css/style.css">
+    <script src="/punto3/js/archivo.js"></script>
+</head>
+<body>
+    <header class="header" >
+        <h1>Talle N°3: Ciclos</h1> 
+    </header>
+    <nav>
+        <button class="botones">
+            <a href="/punto3/tallerJava/indexJava.html">Talleres Java</a>
+        </button>
+    </nav>
+
+    <section>
+        <div class="accordion-item">
+            <input type="checkbox" name="acordeon" id="item2">
+            <label for="item2" class="acordeon-titulo">Punto N°1</label>
+            <p class="acordeon-contenido">
+                1. Realizar la siguiente figura por medio del ciclo Para <br>
+                *<br>**<br>***<br>****<br>*****<br>******<br>*******<br>********<br>*********<br>
+                **********
+            </p>
+            
+            <pre class="acordeon-contenido">
+                <button class="botonCopiar" onclick="Ejecutar(this)" id="1">Copiar codigo</button>
+                <code class="code">
+                    public class Ejercicio1 {
+                        public static void main(String[] args) {
+                            for (int i = 0; i < 11; i++) {
+                                for (int j = 0; j < 11; j++) {
+                                    if(j<=i) {
+                                        System.out.print("*");
+                                    }
+                                }
+                                System.out.println();
+                            }
+                        }
+                    }                    
+                </code>
+            </pre>		
+        </div>
+        
+        <div class="accordion-item">
+            <input type="checkbox" name="acordeon" id="item3">
+            <label for="item3" class="acordeon-titulo">Punto N°2</label>
+            <p class="acordeon-contenido">
+                2. Realizar la siguiente figura por medio del ciclo Mientras - Hacer <br>
+                &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp *<br> 
+                &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp **<br>
+                &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp ***<br>
+                &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp ****<br>&nbsp &nbsp &nbsp &nbsp &nbsp *****<br>
+                &nbsp &nbsp &nbsp &nbsp ******<br>&nbsp &nbsp &nbsp *******<br>&nbsp &nbsp ********<br>&nbsp *********<br>
+                **********<br>
+            </p>
+            
+            <pre class="acordeon-contenido">
+                <button class="botonCopiar" onclick="Ejecutar(this)" id="2">Copiar codigo</button>
+                <code class="code">
+                    public class Ejercicio2 {
+                        public static void main(String[] args) {
+                            int lineas = 10;
+                            int i = 0;
+                            int j = 0;
+                            int k = 0;
+                    
+                            while (i<=lineas) {
+                                while (j<=(lineas-i)) {
+                                    System.out.print(" ");
+                                    j++;
+                                }
+                                while (k<=i) {
+                                    System.out.print("*");
+                                    k++;
+                                }
+                                System.out.println("");
+                                i++;
+                                j = 0;
+                                k = 0;
+                            }
+                        }
+                    }
+                    
+                </code>
+            </pre>		
+        </div>
+        
+        <div class="accordion-item">
+            <input type="checkbox" name="acordeon" id="item4">
+            <label for="item4" class="acordeon-titulo">Punto N°3</label>
+            <p class="acordeon-contenido">
+                3. Realizar la siguiente figura por medio del ciclo Repetir - Hasta Que <br>                   
+                &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp *<br>
+                &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp ***<br>
+                &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp *****<br>
+                &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp *******<br>
+                &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp *********<br>&nbsp &nbsp &nbsp &nbsp &nbsp ***********<br>
+               &nbsp &nbsp &nbsp &nbsp *************<br>&nbsp &nbsp &nbsp ***************<br>&nbsp &nbsp *****************<br>&nbsp *******************<br>
+               *********************<br>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp ***<br>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp ***<br>
+               &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp *****<br>
+                &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp *******<br>
+            </p>
+            
+            <pre class="acordeon-contenido">
+                <button class="botonCopiar" onclick="Ejecutar(this)" id="3">Copiar codigo</button>
+                <code class="code">
+                    public class Ejercicio3 {
+                        public static void main(String[] args) {
+                            int i,j,k,base;
+                            base=10; 
+                            for(i=1; i<base+(base/2); i++){
+                                for(j=base+(base/2); j>i; j--){
+                                    System.out.print(" ");}
+                                for(k=1; k<=2*i-1; k++){
+                                    System.out.print("*");}
+                                System.out.println("");
+                            }
+                            System.out.println("             ***");
+                            System.out.println("             ***");
+                            System.out.println("            *****");
+                            System.out.println("           *******");
+                        }
+                    }                    
+                </code>
+            </pre>		
+        </div>
+        
+        <div class="accordion-item">
+            <input type="checkbox" name="acordeon" id="item5">
+            <label for="item5" class="acordeon-titulo">Punto N°4</label>
+            <p class="acordeon-contenido">
+                4. Se requiere un programa que pueda crear la tabla de multiplicar del número que el usuario indique por medio del ciclo Para; esta debe ser impresa del 1 al 10. Ejemplo, si el usuario indica que desea crear la tabla del 5, entonces el resultado debería ser el siguiente: <br>1 x 5 = 5 <br> 2 x 5 = 10 <br> 3 x 5 = 15 <br> 4 x 5 = 20 <br> 5 x 5 = 25 <br> 6 x 5 = 30 <br> 7 x 5 = 35 <br> 8 x 5 = 40 <br> 9 x 5 = 45 <br> 10 x 5 = 50
+            </p>
+            
+            <pre class="acordeon-contenido">
+                <button class="botonCopiar" onclick="Ejecutar(this)" id="4">Copiar codigo</button>
+                import java.util.Scanner;
+                public class Ejercicio4 {
+                public static void main(String[] args) {
+                Scanner teclado = new Scanner(System.in);
+                int numero;
+                System.out.println("Introduce el número de la tabala de multiplicar");
+                numero = teclado.nextInt();
+        
+                for(int i = 1; i<=10; i++) {
+                    System.out.println(numero+" X "+i+" = "+numero*i);
+        }
+    }
+}
+                </code>
+            </pre>		
+        </div>
+            
+        <div class="accordion-item">
+            <input type="checkbox" name="acordeon" id="item6">
+            <label for="item6" class="acordeon-titulo">Punto N°5</label>
+            <p class="acordeon-contenido">               
+                5. Utilizando el ciclo que usted desee, crear un menú de ejecución infinita hasta que el
+                usuario desee terminar dicho ciclo.  <br>
+                Menú de usuario<br>1. Captura nombre<br>2. Saludar persona<br>3. Salir del sistema
+            </p>
+
+            <pre class="acordeon-contenido"> 
+                <button class="botonCopiar" onclick="Ejecutar(this)" id="5">Copiar codigo</button>
+                <code class="code">
+                    import java.util.Scanner;
+
+        public class Ejercicio5 {
+        public static void main(String[] args) {
+        Scanner teclado = new Scanner(System.in);
+        int opc;
+        String nombre;
+
+        System.out.println("Menú de usuarios");
+
+        do {
+            System.out.println("Elija una opción:");
+            System.out.println("1. Capturar nombre");
+            System.out.println("2. Saludar persona");
+            System.out.println("3. Salir del sistema");
+            opc = teclado.nextInt();
+
+            switch (opc) {
+                case 1:
+                    System.out.println("Escriba su nombre:");
+                    teclado.nextLine();
+                    nombre = teclado.nextLine();
+                    break;
+                case 2:
+                    System.out.println("Escriba su nombre");
+                    teclado.nextLine();
+                    nombre = teclado.nextLine();
+                    System.out.println("Hola, bienvenido, "+nombre+" deseo que tengas un buen día");
+                    break;
+                case 3:
+                    System.out.println("Gracias, que tenga un buen día"); 
+                    break; 
+                
+            }
+        } while (opc != 3);
+    }
+}
+                </code>
+            </pre>
+        </div>
+            
+        <div class="accordion-item">
+            <input type="checkbox" name="acordeon" id="item7">
+            <label for="item7" class="acordeon-titulo">Punto N°6</label>
+            <p class="acordeon-contenido">               
+                6. Se está creando una aplicación que va a estar conectada con un prototipo que permita almacenar contactos telefónicos en el dispositivo. Para ello cada contacto debe contener nombre completo, teléfono y organización. Se requiere que la aplicación permita añadir 3 contactos verificando que el número no esté almacenado, buscar contactos almacenados y eliminar contactos si el usuario lo requiere. Recuerde que el sistema debe terminar cuando el usuario así lo indique.
+
+            <pre class="acordeon-contenido"> 
+                <button class="botonCopiar" onclick="Ejecutar(this)" id="6">Copiar codigo</button>
+                <code class="code">
+                    import java.util.Scanner;
+    public class Ejercicio6 {
+    public static void main(String[] args) {
+        Scanner teclado = new Scanner(System.in);
+        int opc, tel, contactos;
+        String nombre, empresa;
+        long[] numTel;
+        String[] nomb, org;
+        nomb = new String[3];
+        nomb[0] = "Carmen Montiel";
+        nomb[1] = "Juan Montiel";
+        nomb[2] = "Sandy Benitez";
+
+        org = new String[3];
+        org[0] = "Sofka";
+        org[1] = "bnm";
+        org[2] = "SAS";
+
+        numTel = new long[3];
+        numTel[0] = 3126037934L;
+        numTel[1] = 3014445566L;
+        numTel[2] = 3015556677L;
+
+        System.out.println("Agenda de contactos");
+
+        do {
+            System.out.println("Indique qué desea realizar:");
+            System.out.println("1. Registrar contacto");
+            System.out.println("2. Consultar contacto");
+            System.out.println("3. Eliminar contacto");
+            opc = teclado.nextInt();
+
+            switch (opc) {
+                case 1:
+                    System.out.println("Nombre de contacto:");
+                    teclado.nextLine();
+                    nombre = teclado.nextLine();
+                    System.out.println("Número de contacto:");
+                    tel = teclado.nextInt();
+                    System.out.println("Compañía o empresa:");
+                    teclado.nextLine();
+                    empresa = teclado.nextLine();
+
+                    break;
+                case 2:
+                System.out.println("Lista de contactos:");
+                for (int i = 0; i < nomb.length; i++)
+                System.out.println("Nombre de contacto: "+nomb[i]);
+
+                for (int i = 0; i < numTel.length; i++)
+                    System.out.println("Número de contacto: "+numTel[i]);
+
+                    for (int i = 0; i < org.length; i++)
+                    System.out.println("Organización de contacto: "+org[i]);
+
+                break;
+
+                case 3:
+                System.out.println("¿Qué contacto desea eliminar?");
+                System.out.println("1. Eliminar contacto 1");
+                System.out.println("2. Eliminar contacto 2");
+                System.out.println("3. Eliminar contacto 3");
+                contactos = teclado.nextInt();
+                    switch(contactos) {
+                        case 1:
+                        nomb[0]=null;
+                        numTel[0]=0;
+                        org[0]=null;
+                        System.out.println("Este contacto ha sido eliminado");
+                        break;
+
+                        case 2:
+                        nomb[1]=null;
+                        numTel[1]=0;
+                        org[1]=null;
+                        System.out.println("Este contacto ha sido eliminado");
+                        break;
+
+                        case 3:
+                        nomb[2]=null;
+                        numTel[2]=0;
+                        org[2]=null;
+                        System.out.println("Este contacto ha sido eliminado");
+                        break;
+                    }
+                    
+                    break; 
+                
+            }
+        } while (opc != 3);
+    }
+}
+                </code>
+            </pre>
+        </div>
+            
+        <div class="accordion-item">
+            <input type="checkbox" name="acordeon" id="item8">
+            <label for="item8" class="acordeon-titulo">Punto N°7</label>
+            <p class="acordeon-contenido">               
+                7. El parqueadero "El guardián" presta sus servicios de parqueadero nocturno para los usuarios del barrio y requiere una aplicación que permita registrar los vehículos que se cuidan en estas instalaciones. Se sugiere que el parqueadero tenga los atributos del vehículo como son, placa y marca, y los datos del cliente como son nombre completo y número de teléfono. Para cada vehículo se debe permitir la opción de ingresar al parqueadero, retirar del parqueadero y consultar si un vehículo se encuentra en el parqueadero. Recuerde que el sistema debe terminar cuando el usuario así lo indique. Tenga en presente que el parqueadero solo puede almacenar máximo 5 vehículos.
+
+            <pre class="acordeon-contenido">
+                <button class="botonCopiar" onclick="Ejecutar(this)" id="7">Copiar codigo</button>
+                <code class="code">
+                    import java.util.Scanner;
+        public class Ejercicio7 {
+        public static void main(String[] args) {
+        Scanner tecl = new Scanner(System.in);
+        String nomb, placa, marcaAuto;
+        int opcParqueadero, numCont;
+        boolean estaVehiculo = false;
+
+        do {
+            System.out.println("Bienvenido a su parqueadero de confianza EL GUARDIAN");
+            System.out.println("Elija una opción:");
+            System.out.println("1. Ingresar vehículo");
+            System.out.println("2. Retirar vehículo");
+            System.out.println("3. Verificar que el vehículo esté en el parqueadero");
+            opcParqueadero = tecl.nextInt();
+
+            switch(opcParqueadero) {
+                case 1:
+                System.out.println("Nombre del propietario del vehículo:");
+                tecl.nextLine();
+                nomb = tecl.nextLine();
+                System.out.println("Número de contacto:");
+                numCont = tecl.nextInt();
+                System.out.println("Marca del vehículo:");
+                tecl.nextLine();
+                marcaAuto =tecl.nextLine();
+                System.out.println("Placa del vehículo:");
+                placa = tecl.nextLine();
+                System.out.println("Gracias por confiar su vehículo a nuestro cuidado");
+                break;
+
+                case 2:
+                System.out.println("A continuación usted procederá a retirar su vehículo de nuestro parqueadero");
+                System.out.println("Digite sus datos:");
+                System.out.println("Nombre propietario:");
+                tecl.nextLine();
+                nomb = tecl.nextLine();
+                System.out.println("Placa del vehículo:");
+                placa = tecl.nextLine();
+                System.out.println("Su vehículo tiene orden de retiro, gracias por utilizar nuestros servicios");
+                break;
+
+                case 3:
+                estaVehiculo = false;
+                System.out.println("¿Había realizado previo registro de su vehículo?");
+                
+                if(estaVehiculo = true){
+                    
+                    System.out.println("Su vehículo se encuentra en nuestro parqueadero");
+                }else{
+                    System.out.println("Su vehícilo fue retirado, espramos que vuelva a utilizar nuestros servicios");
+                }
+            }
+            
+        } while (opcParqueadero != 3);
+    }
+}
+                </code>
+            </pre>
+        </div>
+        
+        <div class="accordion-item">
+            <input type="checkbox" name="acordeon" id="item9">
+            <label for="item9" class="acordeon-titulo">Punto N°8</label>
+            <p class="acordeon-contenido">
+                8. La escuela automovilística "El Maestro" requiere una aplicación que permita registrar a sus clientes en los cursos de enseñanza automovilística y establecer quienes lo han aprobado para continuar con el trámite de adquirir la licencia de conducción. Para cada usuario se debe permitir registrar su ingreso al curso, consultar usuarios que hayan presentado el curso y resultados de la prueba del curso (si fueron aprobados o no). Recuerde que el sistema debe terminar cuando el usuario así lo indique. Tenga presente que la escuela tiene capacidad máxima de gestionar 8 usuarios en su totalidad.                          
+            </p>
+            
+            <pre class="acordeon-contenido">
+            <button class="botonCopiar" onclick="Ejecutar(this)" id="8">Copiar codigo</button>
+                <code class="code">
+                    import java.util.Scanner;
+    public class Ejercicio8 {
+    public static void main(String[] args) {
+        Scanner teclado = new Scanner(System.in);
+        String nomAlumno;
+        int edad, opc;
+        long docum;
+        boolean aprobado = true;
+
+        do {
+            System.out.println("Bienvenido a nuestra escuela, elija la opción que desea:");
+            System.out.println("1. Registrarse en nuestros cursos");
+            System.out.println("2. Consultar aprobación del curso");
+            System.out.println("3. Salir de la aplicación");
+            opc = teclado.nextInt();
+
+        switch (opc) {
+            case 1:
+            System.out.println("Escuela de automovilismo EL MAESTRO");
+            System.out.println("Inscribase si desea hacer parte de uno de nuestros cursos");
+            System.out.println("Nombre y apellidos:");
+            teclado.nextLine();
+            nomAlumno = teclado.nextLine();
+            System.out.println("Número de documento:");
+            docum = teclado.nextLong();
+            System.out.println("Edad:");
+            edad = teclado.nextInt();
+            System.out.println("Su registro se ha realizado con éxito");
+            break;
+            
+            case 2:
+            System.out.println("Nombre del alumno:");
+            teclado.nextLine();
+            nomAlumno = teclado.nextLine();
+            System.out.println("Documento de identidad:");
+            docum = teclado.nextLong();
+            if(aprobado){
+                System.out.println("Usted aprobó el curso");
+            }else{
+                System.out.println("Usted no aprobó el curso");
+            }
+            break;
+            case 3:
+            System.out.println("Gracias, que tenga un buen día");
+            break;
+            
+        }
+
+        } while(opc!=3);
+        
+    }
+}
+                </code>
+            </pre>		
+        </div>   
+    </section>
+    
+</body>
+</html>

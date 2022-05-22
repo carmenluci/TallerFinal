@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taller N°1 | Java</title>
+    <link rel="stylesheet" href="/punto3/css/style.css">
+    <script src="/punto3/js/archivo.js"></script>
+</head>
+<body>
+    <header class="header" >
+        <h1>Taller N°1: Variables e impresión</h1> 
+    </header>
+    <nav>
+        <button class="botones">
+            <a href="/punto3/tallerJava/indexJava.html">Talleres Java</a>
+        </button>
+    </nav>
+
+    <section>
+        <div class="accordion-item">
+            <input type="checkbox" name="acordeon" id="item2">
+            <label for="item2" class="acordeon-titulo">Punto N°1</label>
+            <p class="acordeon-contenido">
+                1. Realizar un programa el cual solicite su nombre y apellidos.                          
+            </p>
+            <pre class="acordeon-contenido">
+            <button class="botonCopiar" onclick="Ejecutar(this)" id="1">Copiar codigo</button>
+                <code class="code">
+import java.util.Scanner;
+public class Ejercicio1 {
+    public static void main(String[] args) {
+        String nombre, apellidos;
+        Scanner teclado = new Scanner(System.in);
+
+        System.out.println("Pro favor escriba su nombre:");
+        nombre = teclado.nextLine();
+
+        System.out.println("Pro favor escriba sus apellidos:");
+        apellidos = teclado.nextLine();
+    }
+}
+                </code>
+            </pre>		
+        </div>
+        
+        <div class="accordion-item">
+            <input type="checkbox" name="acordeon" id="item3">
+            <label for="item3" class="acordeon-titulo">Punto N°2</label>
+            <p class="acordeon-contenido">
+                2. Realizar un programa el cual solicite su nombre, apellidos, edad y estatura.       
+            </p>
+            <pre class="acordeon-contenido">
+            <button class="botonCopiar" onclick="Ejecutar(this)" id="2">Copiar codigo</button>
+                <code class="code">
+import java.util.Scanner;
+
+public class Ejercicio2 {
+    public static void main(String[] args) {
+        String nombre, apellidos;
+        int edad;
+        double esatura;
+        Scanner teclado = new Scanner(System.in);
+
+        System.out.println("Por favor escriba su nombre:");
+        nombre = teclado.nextLine();
+
+        System.out.println("Por favor escriba sus apellidos:");
+        apellidos = teclado.nextLine();
+
+        System.out.println("Por favor escriba su edad:");
+        edad = teclado.nextInt();
+
+        System.out.println("Por favor escriba su estatura:");
+        esatura = teclado.nextDouble();
+    }
+}
+                </code>
+            </pre>		
+        </div>
+        
+        <div class="accordion-item">
+            <input type="checkbox" name="acordeon" id="item4">
+            <label for="item4" class="acordeon-titulo">Punto N°3</label>
+            <p class="acordeon-contenido">
+                3. Realizar un programa el cual solicite su nombre y apellidos, también debe capturar nombre y apellidos de su padre y madre. Al finalizar debe imprimir en pantalla el siguiente mensaje "Yo [Nombre Completo], soy hijo de [Nombre de la Madre] y [Nombre del Padre].         
+            </p>
+            
+            <pre class="acordeon-contenido">
+            <button class="botonCopiar" onclick="Ejecutar(this)" id="3">Copiar codigo</button>
+                <code class="code">
+import java.util.Scanner;
+
+public class Ejercicio3 {
+    public static void main(String[] args) {
+        String nombre, apellidos, padre, madre;
+        Scanner teclado = new Scanner(System.in);
+
+        System.out.println("Por favor escriba su nombre:");
+        nombre = teclado.nextLine();
+
+        System.out.println("Por favor escriba sus apellidos:");
+        apellidos = teclado.nextLine();
+
+        System.out.println("Por favor escriba el nombre de su padre:");
+        padre = teclado.nextLine();
+
+        System.out.println("Por favor escriba el nombre de su madre:");
+        madre = teclado.nextLine();
+
+        System.out.println("Yo " + nombre + " " + apellidos + " soy hija de " + padre + " y " + madre);
+    }
+}
+                </code>
+            </pre>		
+        </div>
+        
+        <div class="accordion-item">
+            <input type="checkbox" name="acordeon" id="item5">
+            <label for="item5" class="acordeon-titulo">Punto N°4</label>
+            <p class="acordeon-contenido">
+                4. Realizar un programa el cual solicite el nombre de una ciudad capital y el país. Al finalizar debe imprimir en pantalla el siguiente mensaje "La ciudad [Nombre de la Ciudad], es la capital del país [Nombre del País]         
+            </p>
+            
+            <pre class="acordeon-contenido">
+                <button class="botonCopiar" onclick="Ejecutar(this)" id="4">Copiar codigo</button>
+                <code class="code">
+import java.util.Scanner;
+
+public class Ejercicio4 {
+    public static void main(String[] args) {
+        String ciudad, pais;
+        Scanner teclado = new Scanner(System.in);
+
+        System.out.println("Por favor escriba el nombre de un país:");
+        pais = teclado.nextLine();
+
+        System.out.println("Por favor escriba el nombre de la capital de ese país:");
+        ciudad = teclado.nextLine();
+
+        System.out.println("La ciudad "+ciudad+" es la capital del país "+pais);
+    }
+}
+                </code>
+            </pre>		
+        </div>
+            
+        <div class="accordion-item">
+            <input type="checkbox" name="acordeon" id="item6">
+            <label for="item6" class="acordeon-titulo">Punto N°5</label>
+            <p class="acordeon-contenido">
+                5. Realizar un programa el cual solicite el nombre de su mascota, edad de la mascota, el tipo de mascota y su nombre completo. Al finalizar el sistema debe e imprimir en pantalla el siguiente mensaje: [Nombre de Mascota] es un(a) [Tipo de Mascota], el cual, tiene [Edad de la Mascota] años de edad y [Nombre Completo] es actualmente su dueño(a).
+            </p>
+            <pre class="acordeon-contenido">
+                <button class="botonCopiar" onclick="Ejecutar(this)" id="5">Copiar codigo</button>
+                <code class="code">
+import java.util.Scanner;
+
+public class Ejercicio5 {
+    public static void main(String[] args) {
+        String nomMascota, tipoMasc, nombreAmo;
+        int edadMasc;
+
+        Scanner teclado = new Scanner(System.in);
+
+        System.out.println("Por favor escriba el nombre de su mascota:");
+        nomMascota = teclado.nextLine();
+
+        System.out.println("Por favor escriba la edad de su mascota:");
+        edadMasc = teclado.nextInt();
+
+        System.out.println("Que tipo de mascota tiene:");
+        tipoMasc = teclado.nextLine();
+
+        System.out.println("Dueño de la mascota:");
+        nombreAmo = teclado.nextLine();
+
+        System.out.println(nomMascota+" es un(a) "+tipoMasc+", el cual tiene "+edadMasc+" años de edad y "+nombreAmo+" es su dueño(a)");
+    }
+}
+                </code>
+            </pre>		
+        </div>   
+                
+    </section>
+</body>
+</html>
